@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Title</title>
+	<meta name="description" content="Cartli - аутсорсинговый колл-центр для обработки входящих заявок">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="theme-color" content="#000">
+	<meta name="msapplication-navbutton-color" content="#000">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Roboto:300,400,500,700&amp;subset=cyrillic">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"/>
+	<link rel="stylesheet" href="css/main.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js" defer></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js" defer></script>
+	<script src="js/scripts.js" defer></script>
+</head>
+
+<body>
+
+	<header class="header">
+		<div class="header__inner">
+			<div class="header-grid container">
+				<div class="header-grid__left">
+					<figure class="header__logo">
+						<a href="/">
+							<img src="/img/logo.png" alt="Cartli">
+						</a>
+					</figure>
+				</div>
+				<div class="header-grid__center">
+					<button type="button" class="btn btn--green header__callback">Перезвоните мне</button>
+				</div>
+				<div class="header-grid__right">
+					<div class="header__contacts">
+						<div class="header__contacts-info">
+							<div class="header__contacts-ico">
+								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="16" height="16" viewBox="0 0 348.077 348.077" xml:space="preserve">
+									<g>
+										<path d="M340.273,275.083l-53.755-53.761c-10.707-10.664-28.438-10.34-39.518,0.744l-27.082,27.076 c-1.711-0.943-3.482-1.928-5.344-2.973c-17.102-9.476-40.509-22.464-65.14-47.113c-24.704-24.701-37.704-48.144-47.209-65.257     c-1.003-1.813-1.964-3.561-2.913-5.221l18.176-18.149l8.936-8.947c11.097-11.1,11.403-28.826,0.721-39.521L73.39,8.194 C62.708-2.486,44.969-2.162,33.872,8.938l-15.15,15.237l0.414,0.411c-5.08,6.482-9.325,13.958-12.484,22.02     C3.74,54.28,1.927,61.603,1.098,68.941C-6,127.785,20.89,181.564,93.866,254.541c100.875,100.868,182.167,93.248,185.674,92.876 c7.638-0.913,14.958-2.738,22.397-5.627c7.992-3.122,15.463-7.361,21.941-12.43l0.331,0.294l15.348-15.029     C350.631,303.527,350.95,285.795,340.273,275.083z" fill="#40a247" />
+									</g>
+								</svg>
+							</div>
+							<div class="header__contacts-num">
+								<p>Call now:</p>
+								<b>586 21 46</b>
+							</div>
+						</div>
+					</div>
+					<div class="header__social">
+						<a href="#" class="header__social-facebook" title="Facebook">
+							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 155.139 155.139" xml:space="preserve" width="17" height="17">
+								<g>
+									<path d="M89.584,155.139V84.378h23.742l3.562-27.585H89.584V39.184   c0-7.984,2.208-13.425,13.67-13.425l14.595-0.006V1.08C115.325,0.752,106.661,0,96.577,0C75.52,0,61.104,12.853,61.104,36.452   v20.341H37.29v27.585h23.814v70.761H89.584z" fill="#6e6e6e"/>
+								</g>
+							</svg>
+						</a>
+						<a href="#" class="header__social-twitter" title="Twitter">
+							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 612 612" xml:space="preserve" width="17" height="17">
+								<g>
+									<path d="M612,116.258c-22.525,9.981-46.694,16.75-72.088,19.772c25.929-15.527,45.777-40.155,55.184-69.411    c-24.322,14.379-51.169,24.82-79.775,30.48c-22.907-24.437-55.49-39.658-91.63-39.658c-69.334,0-125.551,56.217-125.551,125.513    c0,9.828,1.109,19.427,3.251,28.606C197.065,206.32,104.556,156.337,42.641,80.386c-10.823,18.51-16.98,40.078-16.98,63.101    c0,43.559,22.181,81.993,55.835,104.479c-20.575-0.688-39.926-6.348-56.867-15.756v1.568c0,60.806,43.291,111.554,100.693,123.104    c-10.517,2.83-21.607,4.398-33.08,4.398c-8.107,0-15.947-0.803-23.634-2.333c15.985,49.907,62.336,86.199,117.253,87.194    c-42.947,33.654-97.099,53.655-155.916,53.655c-10.134,0-20.116-0.612-29.944-1.721c55.567,35.681,121.536,56.485,192.438,56.485    c230.948,0,357.188-191.291,357.188-357.188l-0.421-16.253C573.872,163.526,595.211,141.422,612,116.258z" fill="#6e6e6e"/>
+								</g>
+							</svg>
+						</a>
+					</div>
+					<div class="header__hamburger">
+						<div class="header__hamburger-inner"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="headbar">
+			<div class="headbar__line container">
+				<span class="headbar__line-indicator"></span>
+			</div>
+			<div class="headbar__grid container">
+				<nav class="headbar__nav">
+					<ul class="headbar__nav-list">
+						<li><a href="#home">Главная</a></li>
+						<li><a href="about.html">О нас</a></li>
+						<li class="current"><a href="bcases.html">Кейсы</a></li>
+						<li><a href="blog.html">Блог</a></li>
+						<li><a href="vacancies.html">Вакансии</a></li>
+						<li><a href="contacts.html">Контакты</a></li>
+					</ul>
+				</nav>
+				<div class="headbar__search">
+					<form action="" class="headbar__search-form" autocomplete="off">
+						<input class="headbar__search-input" type="text" name="search" placeholder="Поиск" id="search" aria-label="Поиск">
+						<label for="search"></label>
+						<button class="headbar__search-btn" type="submit">Найти</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</header>
+
+
+
+
+	<main class="main">
+
+		<section class="breadcrumbs" style="background-image: url('img/breadcrumb-bcases-bg.jpg')">
+			<div class="breadcrumbs__inner container">
+				<h1 class="breadcrumbs__title">Кейсы</h1>
+				<ul>
+					<li><a href="index.html">Главная</a></li>
+					<li><a href="bcases.html">Кейсы</a></li>
+					<li class="current"><span>TEST3</span></li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="bcase__page">
+			<article class="bcase__article">
+				<figure class="bcase__article-img">
+					<img src="img/hyundai.jpg" alt="TEST3">
+				</figure>
+				<h2 class="bcase__article-title">TEST3</h2>
+				<div class="bcase__article-content">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque harum in aspernatur quos excepturi corporis sequi at, minus maxime tempora?
+				</div>
+			</article>
+		</section>
+
+	</main>
+
+
+
+	<footer class="footer">
+		<div class="footer__inner container">
+			<div class="footer__logo">
+				<img src="/img/logo.png" alt="Cartli">
+			</div>
+			<div class="footer__links">
+				<a href="/">Главная</a>
+				<a href="#">Про компанию</a>
+				<a href="#">Кейсы</a>
+				<a href="#">Блог</a>
+				<a href="#">Вакансии</a>
+				<a href="#">Контакты</a>
+			</div>
+			<div class="footer__social">
+				<a href="#" class="footer__social-facebook">
+					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 155.139 155.139" xml:space="preserve" width="17" height="17">
+						<g>
+							<path id="f_1_" d="M89.584,155.139V84.378h23.742l3.562-27.585H89.584V39.184   c0-7.984,2.208-13.425,13.67-13.425l14.595-0.006V1.08C115.325,0.752,106.661,0,96.577,0C75.52,0,61.104,12.853,61.104,36.452   v20.341H37.29v27.585h23.814v70.761H89.584z" fill="#fff"></path>
+						</g>
+					</svg>
+				</a>
+				<a href="#" class="footer__social-twitter">
+					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 612 612" xml:space="preserve" width="17" height="17">
+						<g>
+							<path d="M612,116.258c-22.525,9.981-46.694,16.75-72.088,19.772c25.929-15.527,45.777-40.155,55.184-69.411    c-24.322,14.379-51.169,24.82-79.775,30.48c-22.907-24.437-55.49-39.658-91.63-39.658c-69.334,0-125.551,56.217-125.551,125.513    c0,9.828,1.109,19.427,3.251,28.606C197.065,206.32,104.556,156.337,42.641,80.386c-10.823,18.51-16.98,40.078-16.98,63.101    c0,43.559,22.181,81.993,55.835,104.479c-20.575-0.688-39.926-6.348-56.867-15.756v1.568c0,60.806,43.291,111.554,100.693,123.104    c-10.517,2.83-21.607,4.398-33.08,4.398c-8.107,0-15.947-0.803-23.634-2.333c15.985,49.907,62.336,86.199,117.253,87.194    c-42.947,33.654-97.099,53.655-155.916,53.655c-10.134,0-20.116-0.612-29.944-1.721c55.567,35.681,121.536,56.485,192.438,56.485    c230.948,0,357.188-191.291,357.188-357.188l-0.421-16.253C573.872,163.526,595.211,141.422,612,116.258z" fill="#fff"></path>
+						</g>
+					</svg>
+				</a>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>

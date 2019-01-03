@@ -1,0 +1,295 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	.heading__txt
+		flex-basis: 45%
+	.about
+		&__operator-3
+			display: none
+	.bcase
+		li.current::before,
+		&__x-line,
+		&__y-line
+			display: none
+		&__content
+			padding-top: 20px
+		&__item
+			grid-column-gap: 50px
+		&__all
+			visibility: visible
+			opacity: 1
+	.service
+		&__top
+			&-main
+				grid-column-gap: 50px
+				padding-top: 20px
+				padding-bottom: 10px
+			&-desc
+				margin-bottom: 30px
+			&-img
+				max-width: 300px
+	.footer
+		&__links
+			a
+				margin-right: 30px
+
+	.vacancy-a
+		grid-template-columns: 1fr
+		justify-items: center
+	.about_us-b
+		.vacancy-a__right
+			width: 100%
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	.header
+		background: #fff
+		box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2)
+		&__burger
+			display: block
+		&__mail
+			display: none
+		&__nav
+			display: none
+			margin: 0 -15px
+			&.active
+				display: block
+				animation: ScaleY 0.3s !important
+				transform-origin: center top
+				overflow-y: auto
+			ul
+				flex-direction: column
+				background-color: #fff
+				li
+
+					a
+						border-top: 1px solid rgba(65, 65, 65, 0.2)
+						color: var(--dgray)
+						font-weight: 500
+						border-radius: 0
+						text-align: left
+				li
+					&.current
+						&::before,
+						&::after
+							display: none
+						a
+							background: var(--green)
+							border-top: none
+							color: #fff
+
+	.about
+		overflow-x: hidden
+		&__grid
+			grid-template-columns: 1fr
+		&__operator
+			transform: scale(0.7)
+			transform-origin: 50% 80%
+			height: 330px
+			width: auto
+		&__text
+			padding-top: 0
+		&__more
+			display: flex
+			margin-left: auto
+			margin-right: auto
+
+	.service
+		&__top
+			&-tabs
+				li
+					flex-basis: auto
+					padding: 10px
+					margin: 0 15px 15px 0
+					span
+						font-size: 15px
+		&__bottom
+			&-grid
+				grid-template-columns: repeat(2, max-content)
+	.bcase
+		&__item
+			&-img
+				width: auto
+		&__nav
+			li
+				margin: 5px 10px
+	.contacts
+		&__form
+			grid-template-columns: 1fr 1fr
+			button
+				grid-column: auto
+				grid-row: auto
+				align-self: center
+		&__info
+			&-time
+				p:first-child
+					margin-top: auto
+					margin-bottom: 15px
+
+	.footer
+		&__inner
+			padding: 20px 15px
+			grid-column-gap: 25px
+		&__links
+			text-align: center
+			a
+				margin-bottom: 10px
+				display: inline-block
+	.vacancy-b__info
+		grid-template-columns: 1fr
+		grid-row-gap: 20px
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	.header
+		&__top
+			height: 50px
+			padding-right: 0
+		&__logo
+			height: 35px
+		&__rside
+			flex-grow: 0
+		&__tel
+			display: none
+		&__call
+			position: fixed
+			z-index: 4
+			right: 15px
+			bottom: 15px
+	.about
+		&__operator
+			&-4,
+			&-2
+				max-width: initial
+	.bcase
+		&__nav
+			display: grid
+			grid-template-columns: 1fr 1fr
+			justify-items: center
+			grid-gap: 5px
+			li
+				margin: 0
+				width: 100%
+				text-align: center
+				a
+					height: auto
+					min-height: 40px
+					display: flex
+		&__item
+			grid-template-columns: 1fr
+			grid-row-gap: 20px
+			padding: 0 10px
+			&-date
+				justify-content: start
+				&::before
+					display: none
+			&-img
+				order: -1
+				width: 100%
+			&:nth-child(even)
+				order: 1
+			&-footer
+				grid-template-columns: 1fr
+				justify-items: center
+		&__all
+			display: none
+		&__article
+			&-img
+				height: 250px
+
+	.service
+		padding-top: 90px
+		&__top
+			&-main
+				grid-template-columns: 1fr
+			&-tabs
+				justify-content: center
+		&__bottom
+			&-grid
+				grid-template-columns: 1fr
+	
+
+	.contacts
+		&__form
+			grid-template-columns: 1fr
+			margin-bottom: 50px
+			textarea
+				order: 2
+			button
+				order: 3
+				justify-self: center
+		&__info
+			grid-template-columns: 1fr
+			&-time
+				align-items: flex-start
+	.footer
+		background-position-x: 90%
+		&__inner
+			grid-template-columns: 1fr
+			grid-row-gap: 10px
+		&__logo
+			justify-self: center
+			margin-bottom: 20px
+		&__social
+			justify-self: center
+
+	.breadcrumbs
+		margin-bottom: 30px
+		&__inner
+			flex-direction: column
+			justify-content: center
+		&__title
+			font-size: 30px
+			margin-bottom: 10px
+
+	.slick-dotted.slick-slider
+		margin-bottom: 50px
+	.slick-dots
+		bottom: -35px
+	.slick-dots li.slick-active button:before
+		color: var(--green)
+		opacity: 1
+
+
+	.about_us-a
+		padding-top: 0
+		display: block
+		.vacancy-a__left
+			margin-bottom: 30px
+		.vacancy-a__right
+			margin-left: auto
+			margin-right: auto
+	.about_us-b
+		.accordion
+			font-size: 16px
+			padding: 15px
+		.panel
+			padding: 0 15px 15px
+	.vacancy-a
+		padding-top: 0
+	.vacancy-c__phone--number:last-child
+		display: block
+
+
+	.connect
+		&__content
+			grid-template-columns: 1fr
+		&__form
+			button
+				justify-self: center
+	.gmap
+		height: 300px
+	
+	.blog
+		&__articles
+			grid-template-columns: 1fr
+		&__page
+			order: -1
+		&__detail
+			&-img
+				height: 250px
+	.lastinfo
+		grid-template-columns: 1fr
