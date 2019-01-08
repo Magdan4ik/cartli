@@ -180,13 +180,48 @@ main {
   color: var(--dgray);
 }
 
-.about__more {
-  margin-top: 20px;
-}
-
 .about__more:hover {
   background-color: var(--green);
   color: #fff;
+}
+
+#up {
+  visibility: hidden;
+  opacity: 0;
+  background: var(--green);
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--green);
+  border-radius: 50%;
+  z-index: 3;
+  font-size: 0;
+  transition: 0.6s;
+}
+
+#up[data-visible='false'] {
+  visibility: hidden;
+  opacity: 0;
+}
+
+#up[data-visible='true'] {
+  visibility: visible;
+  opacity: 1;
+}
+
+#up::before {
+  content: "";
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  border-color: #fff;
+  border-style: solid;
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+  padding-top: 7px;
+  padding-left: 7px;
+  margin-top: 3px;
 }
 
 /*BUTTONS END */
