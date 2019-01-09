@@ -91,7 +91,7 @@ h2
 			border-radius: 50%
 			margin-right: 25px
 main
-	padding-top: 80px
+	padding-top: 100px
 
 .overlay
 	position: fixed
@@ -112,8 +112,8 @@ main
 	padding-left: 15px
 	margin-right: auto
 	margin-left: auto
-	border-left: 1px solid red
-	border-right: 1px solid red
+	// border-left: 1px solid red
+	// border-right: 1px solid red
 
 /* BUTTONS START*/
 .btn
@@ -194,7 +194,7 @@ main
 		justify-content: space-between
 		align-items: center
 		padding-right: 25px
-		z-index: 2
+		transition: 0.3s height
 	&__lside
 		flex-grow: 4
 	&__rside
@@ -267,66 +267,46 @@ main
 			animation: beat-after 1.5s ease 200ms infinite
 
 	&__nav
+		background: #fff
+		position: relative
 		ul
 			display: flex
 			flex-flow: row nowrap
 			justify-content: center
 			list-style: none
 			li
-				position: relative
-
 				a
-					position: relative
-					background: rgba(255, 255, 255, 0.1)
 					display: block
-					min-width: 150px
-					padding: 12px
-					color: #fff
+					padding: 6px 35px
+					color: var(--dgray)
 					font-size: 15px
 					font-family: "Roboto", sans-serif
-					font-weight: 400
-					text-align: center
-					border-radius: 0 0 20px 20px
-					z-index: 1
-					transition: 0.3s background
+					font-weight: 300
+					white-space: nowrap
+					transition: 0.3s
 					&:hover
-						background: rgba(255, 255, 255, 0.2)
-				&:first-child
-					&::before
-						display: none
-				&:last-child
-					&::after
-						display: none
-				&.current
-					&::before,
-					&::after
-						content: ""
-						width: 50px
-						height: 100%
-						position: absolute
-						top: 0
-						z-index: 0
-						border-radius: 50%
-						box-shadow: 0 0 0 25px #fff
-					&::before
-						left: -50px
-						clip: rect(0, 50px, 25px, 25px)
-					&::after
-						right: -50px
-						clip: rect(0, 25px, 25px, 0)
-					a
-						background: #fff
 						color: var(--green)
-	&[data-nav='false']
-		box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2)
-		.header__nav
-			animation: SlideUp 0.2s both
+				
+				&.current
+					a
+						color: var(--green)
+	&__navline
+		background: rgba(0,0,0,0.1)
+		width: 100%
+		height: 1px
+		&-indicator
 			position: absolute
-			left: 0
-			right: 0
-	&[data-nav='true']
-		.header__nav
-			animation: SlideDown 0.2s both
+			top: 0
+			height: inherit
+			background-color: var(--green)
+			transition: all .3s ease
+
+	&[data-shrink='true']
+		box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2)
+		.header__top
+			height: 60px
+
+
 
 	&__burger
 		display: none
