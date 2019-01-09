@@ -2,8 +2,8 @@ window.addEventListener('DOMContentLoaded', function() {
 
 
 	// Variability
-	$("[data-id='style']").attr('href', '/assets/templates/cartli/css/main.css?' + Math.random());
-	$("[data-id='script']").attr('src', '/assets/templates/cartli/js/scripts.js?' + Math.random());
+	// $("[data-id='style']").attr('href', '/assets/templates/cartli/css/main.css?' + Math.random());
+	// $("[data-id='script']").attr('src', '/assets/templates/cartli/js/scripts.js?' + Math.random());
 
 	const            w = window,
 					 d = document,
@@ -23,42 +23,73 @@ window.addEventListener('DOMContentLoaded', function() {
 			
 
 
-	/*Sticky header */
 	if (mDeviceMin) {
-		const toggleNav = () => setTimeout(() => {(w.pageYOffset > 80) ? header.dataset.nav = false : header.dataset.nav = true}, 150);
-		if(w.pageYOffset > 80) header.dataset.nav = false;
-		w.addEventListener("scroll", toggleNav);
-	};
+		/*Toggle shrink of header */
+		(function() {
+			const shrinkHeader = () => setTimeout(() => {(w.pageYOffset > 80) ? header.dataset.shrink = true : header.dataset.shrink = false}, 150);
+			w.addEventListener("scroll", shrinkHeader);
+		}());
 
 
 
-	/*Scroll to top */
-	if (mDeviceMin) {
-		const up = document.getElementById('up');
-		const toTop = () => setTimeout(() => {(w.pageYOffset > 500) ? up.dataset.visible = true : up.dataset.visible = false}, 150);
-		up.addEventListener('click', () => window.scrollTo({top: 0,	behavior: 'smooth'}));
-		w.addEventListener("scroll", toTop);
+		/* Sliding line on nav link */
+		(function() {
+			let link    = d.querySelectorAll(".header__nav ul li a");
+			let current = d.querySelector(".header__nav ul li.current a");
+			let line    = d.querySelector(".header__navline-indicator");
+
+			link.forEach( el => {
+				el.addEventListener('mouseover', () => sline(el));
+				el.addEventListener('mouseout', () => sline(current));
+				el.addEventListener('click', () => {
+					current = el;
+					link.forEach( el => el.parentNode.classList.remove('current'));
+					el.parentNode.classList.add('current');
+					sline(el);
+				});
+			});
+
+			function sline(el) {
+				let paddingL = parseInt(window.getComputedStyle(el).getPropertyValue('padding-left'));
+				let paddingR = parseInt(window.getComputedStyle(el).getPropertyValue('padding-right'));
+
+				line.style.width = el.offsetWidth - paddingL - paddingR + 'px';
+				line.style.left  = el.offsetLeft  + paddingL + 'px';
+
+			};
+
+			sline(current);
+		}());
+	
+
+
+		/* Scroll site to top */
+		(function() {
+			const up = document.getElementById('up');
+			const toTop = () => setTimeout(() => {(w.pageYOffset > 500) ? up.dataset.visible = true : up.dataset.visible = false}, 150);
+			up.addEventListener('click', () => window.scrollTo({top: 0,	behavior: 'smooth'}));
+			w.addEventListener("scroll", toTop);
+		}());
 	};
 
 
 
 	/* Burger Menu*/
-		(function() {
-			let burger  = d.querySelector('.header__burger'),
-				nav     = d.querySelector('.header__nav'),
-				overlay = d.createElement('div');
-				overlay.className = 'overlay';
+	(function() {
+		let burger  = d.querySelector('.header__burger'),
+			nav     = d.querySelector('.header__nav'),
+			overlay = d.createElement('div');
+			overlay.className = 'overlay';
 
-				function toggleMobmenu() {
-					burger.classList.toggle('active');
-					nav.classList.toggle('active');
-					d.body.classList.toggle('hidden');
-					(nav.classList.contains('active')) ? d.body.insertBefore(overlay, d.body.firstChild) : overlay.remove()
-				};
+			function toggleMobmenu() {
+				burger.classList.toggle('active');
+				nav.classList.toggle('active');
+				d.body.classList.toggle('hidden');
+				(nav.classList.contains('active')) ? d.body.insertBefore(overlay, d.body.firstChild) : overlay.remove()
+			};
 
-				overlay.addEventListener("click", toggleMobmenu);
-				burger.addEventListener("click", toggleMobmenu);
-		}());
+			[overlay, burger].forEach(el => el.addEventListener('click', toggleMobmenu));
+	}());
 
 
 
