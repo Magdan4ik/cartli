@@ -23,31 +23,31 @@
 	<header class="header">
 		<div class="header__inner container">
 			<div class="header__top">
-				<div class="header__lside">
-					<a href="/" class="header__logo"><img src="/img/logo.png" alt="Cartli"></a>
-				</div>
-				<div class="header__rside">
-					<a class="header__mail" href="mailto: info@cartli.ua">info@cartli.ua</a>
-					<a class="header__tel" href="tel: +380445864155">+38 (044) 586-41-55</a>
-					<button type="button" class="header__call open-modal" data-modal="#modalCall"><i>Callback</i></button>
-					<button type="button" class="header__burger"><div class="header__burger-in"></div></button>
-				</div>
+				<p class="header__dep">Связаться с отделом продаж:</p>
+				<a class="header__info header__info--tel" href="tel: +380445864155">+38 (044) 586-41-55</a>
+				<a class="header__info header__info--mail" href="mailto: info@cartli.ua">info@cartli.ua</a>
 			</div>
-			<nav class="header__nav">
-				<div class="header__navline"><span class="header__navline-indicator"></span></div>
-				<ul>
-					<li class="current"><a href="/">Главная</a></li>
-					<li><a href="#o-nas">О нас</a></li>
-					<li><a href="#kejsy">Кейсы</a></li>
-					<li><a href="#uslugi">Услуги</a></li>
-					<li><a href="#articles">Публикации</a></li>
-					<li><a href="#news">Новости</a></li>
-					<li><a href="#vakansii">Вакансии</a></li>
-					<li><a href="#kontakty">Контакты</a></li>
-				</ul>
-			</nav>
+			<div class="header__middle">
+				<a class="header__logo" href="/" >Cartli</a>
+				<nav class="header__nav">
+					<ul class="header__navlist">
+						<li class="current"><a href="/"><span>Главная</span></a></li>
+						<li><a href="#o-nas"><span>О нас</span></a></li>
+						<li><a href="#kejsy"><span>Кейсы</span></a></li>
+						<li><a href="#uslugi"><span>Услуги</span></a></li>
+						<li><a href="#articles"><span>Публикации</span></a></li>
+						<li><a href="#news"><span>Новости</span></a></li>
+						<li><a href="#vakansii"><span>Вакансии</span></a></li>
+						<li><a href="#kontakty"><span>Контакты</span></a></li>
+					</ul>
+				</nav>
+				<button type="button" class="header__call open-modal" data-modal="#modalCall">Перезвоните мне</button>
+				<button type="button" class="header__burger"><div class="header__burger-in"></div></button>
+			</div>
+
 		</div>
 	</header>
+
 
 
 	<main class="main container">
@@ -85,7 +85,7 @@
 
 
 
-		<section class="bcase">
+		<section class="bcase" style="display: none">
 			<div class="bcase__container">
 				<h2 class="bcase__title">Кейсы</h2>
 				<ul class="bcase__nav">

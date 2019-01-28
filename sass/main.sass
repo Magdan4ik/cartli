@@ -40,6 +40,7 @@ body
 	color: var(--lgray)
 	overflow-x: hidden
 main
+	padding-top: 100px
 	min-height: calc(100vh - 220px)
 
 a, button
@@ -90,8 +91,7 @@ h2
 			background-color: var(--dgray)
 			border-radius: 50%
 			margin-right: 25px
-main
-	padding-top: 100px
+	
 
 .overlay
 	position: fixed
@@ -180,133 +180,121 @@ main
 
 /* MAIN HEADER START*/
 .header
+	background-color: #fff
 	position: fixed
 	left: 0
 	right: 0
 	top: 0
 	width: 100%
 	z-index: 3
-	&__top
-		position: relative
-		background: #fff
-		height: 80px
-		display: flex
-		justify-content: space-between
-		align-items: center
-		padding-right: 25px
-		transition: 0.3s height
-	&__lside
-		flex-grow: 4
-	&__rside
-		flex-grow: 2
-		display: flex
-		justify-content: space-between
-		align-items: center
-	&__logo
-		display: block
-		width: 170px
-		height: 45px
-		img
-			width: 100%
-			height: 100%
-			object-fit: contain
-	&__mail
-		color: var(--green)
-		letter-spacing: 1px
-		font-size: 16px
-		font-weight: 300
-	&__tel
-		display: flex
-		align-items: center
-		color: var(--dgray)
-		letter-spacing: 1px
-		font-size: 20px
-		font-weight: 300
-		&::before
-			content: ""
-			background: url('../img/ico-tel.svg') no-repeat 0 0
-			background-size: contain
-			width: 13px
-			height: 13px
-			margin-right: 10px
-	&__call
-		position: relative
-		display: flex
-		justify-content: center
-		align-items: center
-		width: 40px
-		height: 40px
-		text-align: center
-		background: var(--green)
-		border-radius: 50%
-		cursor: pointer
-		animation: beat 1.5s ease 0s infinite
-		i
-			display: block
-			width: 14px
-			height: 14px
-			background:  url('../img/ico-tel--white.svg') no-repeat center / contain
-			font-size: 0
-
-		&:before, &:after
-			content: ""
-			position: absolute
-			width: 100%
-			height: 100%
-			top: 0
-			left: 0
-			background-color: var(--green)
-			opacity: 0.4
-			border-radius: inherit
-		&:before
-			z-index: -2
-			animation: beat-before 1.5s ease 100ms infinite
-
-		&:after
-			z-index: -1
-			animation: beat-after 1.5s ease 200ms infinite
-
-	&__nav
-		background: #fff
-		position: relative
-		ul
-			display: flex
-			flex-flow: row nowrap
-			justify-content: center
-			list-style: none
-			li
-				a
-					display: block
-					padding: 6px 35px
-					color: var(--dgray)
-					font-size: 15px
-					font-family: "Roboto", sans-serif
-					font-weight: 300
-					white-space: nowrap
-					transition: 0.3s
-					&:hover
-						color: var(--green)
-				
-				&.current
-					a
-						color: var(--green)
-	&__navline
-		background: rgba(0,0,0,0.1)
-		width: 100%
-		height: 1px
-		&-indicator
-			position: absolute
-			top: 0
-			height: inherit
-			background-color: var(--green)
-			transition: all .3s ease
-
+	box-shadow: 0 1px 3px 0 rgba(255, 255, 255, 0)
+	transition: 0.4s box-shadow
 	&[data-shrink='true']
 		box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2)
-		.header__top
-			height: 60px
+	&__top
+		height: 25px
+		background-image: linear-gradient(to right, #fff 10%, #f2f2f2)
+		display: flex
+		justify-content: flex-end
+		align-items: center
+		padding: 0 15px
+	&__dep
+		font-family: 'Roboto', sans-serif
+		font-size: 14px
+		font-weight: 700
+		color: var(--dgray)
+	&__info
+		display: inline-flex
+		align-items: center
+		margin-left: 25px
+		font-size: 14px
+		font-weight: 300
+		letter-spacing: 0.7px
+		color: var(--green)
+		&::before
+			content: ''
+			background: no-repeat center/contain
+			width: 12px
+			height: 12px
+			display: inline-block
+			margin-right: 5px
+		&--tel
+			&::before
+				background-image: url('../img/ico-tel.svg')
+		&--mail
+			&::before
+				background-image: url('../img/ico-mail.svg')
 
+	&__middle
+		height: 75px
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding-right: 15px
+	&__logo
+		background: url('../img/logo.png') no-repeat center/contain
+		display: block
+		width: 150px
+		height: 50px
+		align-self: flex-start
+		font-size: 0
+		flex-shrink: 0
 
+	&__navlist
+		display: flex
+		list-style: none
+		li
+			a
+				display: block
+				padding: 25px 30px
+				font-family: 'Roboto'
+				font-size: 15px
+				line-height: 1.7
+				white-space: nowrap
+				color: var(--dgray)
+				span
+					position: relative
+					&::after
+						content: ''
+						position: absolute
+						top: 100%
+						left: 0
+						width: 100%
+						height: 3px
+						background: var(--green)
+						opacity: 0
+						transition: opacity 0.3s, transform 0.3s
+						transform: translateY(15px)
+				&:hover
+					color: var(--green)
+					span
+						&::after
+							opacity: 1
+							transform: translateY(3px)
+			&.current
+				a
+					color: var(--green)
+					span
+						&::after
+							opacity: 1
+							transform: translateY(3px)
+	&__call
+		font-family: 'Roboto'
+		font-size: 14px
+		color: var(--green)
+		width: 150px
+		height: 35px
+		display: inline-flex
+		align-items: center
+		justify-content: center
+		border: 1px solid var(--green)
+		border-radius: 22px
+		transition: 0.5s all
+		flex-shrink: 0
+		&:hover
+			background-color: var(--green)
+			color: #fff
+					
 
 	&__burger
 		display: none
@@ -1772,7 +1760,7 @@ main
 .paging1 > a
 	color: var(--lgray)
 	border: 1px solid var(--lgray)
-	padding: 0 5px;
+	padding: 0 5px
 /* SEARCH AJAX END */
 
 /* Modal START */

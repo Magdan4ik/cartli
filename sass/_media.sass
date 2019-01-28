@@ -2,8 +2,21 @@
 
 /*==========  Desktop First  ==========*/
 
+/* Very Large Screens */
+@media only screen and (max-width : 1300px)
+	.header
+		&__navlist
+			li
+				a
+					padding: 25px 15px
+
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
+	.header
+		&__navlist
+			li
+				a
+					padding: 25px 10px
 	.heading__txt
 		flex-basis: 45%
 	.about
@@ -50,33 +63,36 @@
 		box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2)
 		&__burger
 			display: block
-		&__mail
-			display: none
 		&__nav
 			display: none
-			margin: 0 -15px
+			position: absolute
+			top: 100px
+			right: 0
+			width: 100%
+			max-width: 500px
+			max-height: calc(100vh - 50px)
 			&.active
 				display: block
 				animation: ScaleY 0.3s !important
 				transform-origin: center top
 				overflow-y: auto
-			ul
-				flex-direction: column
-				background-color: #fff
-				li
-
+		&__navlist
+			flex-direction: column
+			background-color: #fff
+			li
+				a
+					padding: 10px
+					border-top: 1px solid rgba(65, 65, 65, 0.2)
+					color: var(--dgray)
+					font-weight: 500
+					span::after
+						display: none
+			li
+				&.current
 					a
-						border-top: 1px solid rgba(65, 65, 65, 0.2)
-						color: var(--dgray)
-						font-weight: 500
-						border-radius: 0
-						text-align: left
-				li
-					&.current
-						a
-							background: var(--green)
-							border-top: none
-							color: #fff
+						background: var(--green)
+						border-top: none
+						color: #fff
 
 	.about
 		overflow-x: hidden
@@ -143,19 +159,23 @@
 @media only screen and (max-width : 768px)
 	.header
 		&__top
+			display: none
+		&__middle
 			height: 50px
-			padding-right: 0
+			padding: 0
 		&__logo
 			height: 35px
-		&__rside
-			flex-grow: 0
-		&__tel
-			display: none
+			align-self: center
+		&__nav
+			top: 50px
 		&__call
+			display: none
 			position: fixed
 			z-index: 4
 			right: 15px
 			bottom: 15px
+	.main
+		padding-top: 50px
 	.about
 		&__operator
 			&-4,

@@ -30,39 +30,6 @@ window.addEventListener('DOMContentLoaded', function() {
 			w.addEventListener("scroll", shrinkHeader);
 		}());
 
-
-
-		/* Sliding line on nav link */
-		(function() {
-			let link    = d.querySelectorAll(".header__nav ul li a");
-			let current = d.querySelector(".header__nav ul li.current a");
-			let line    = d.querySelector(".header__navline-indicator");
-
-			link.forEach( el => {
-				el.addEventListener('mouseover', () => sline(el));
-				el.addEventListener('mouseout', () => sline(current));
-				el.addEventListener('click', () => {
-					current = el;
-					link.forEach( el => el.parentNode.classList.remove('current'));
-					el.parentNode.classList.add('current');
-					sline(el);
-				});
-			});
-
-			function sline(el) {
-				let paddingL = parseInt(window.getComputedStyle(el).getPropertyValue('padding-left'));
-				let paddingR = parseInt(window.getComputedStyle(el).getPropertyValue('padding-right'));
-
-				line.style.width = el.offsetWidth - paddingL - paddingR + 'px';
-				line.style.left  = el.offsetLeft  + paddingL + 'px';
-
-			};
-
-			sline(current);
-		}());
-	
-
-
 		/* Scroll site to top */
 		(function() {
 			const up = document.getElementById('up');

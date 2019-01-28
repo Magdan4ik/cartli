@@ -47,6 +47,7 @@ body {
 }
 
 main {
+  padding-top: 100px;
   min-height: calc(100vh - 220px);
 }
 
@@ -116,10 +117,6 @@ h2.dot::before {
   background-color: var(--dgray);
   border-radius: 50%;
   margin-right: 25px;
-}
-
-main {
-  padding-top: 100px;
 }
 
 .overlay {
@@ -225,172 +222,155 @@ main {
 /*BUTTONS END */
 /* MAIN HEADER START*/
 .header {
+  background-color: #fff;
   position: fixed;
   left: 0;
   right: 0;
   top: 0;
   width: 100%;
   z-index: 3;
-}
-
-.header__top {
-  position: relative;
-  background: #fff;
-  height: 80px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-right: 25px;
-  transition: 0.3s height;
-}
-
-.header__lside {
-  flex-grow: 4;
-}
-
-.header__rside {
-  flex-grow: 2;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.header__logo {
-  display: block;
-  width: 170px;
-  height: 45px;
-}
-
-.header__logo img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-
-.header__mail {
-  color: var(--green);
-  letter-spacing: 1px;
-  font-size: 16px;
-  font-weight: 300;
-}
-
-.header__tel {
-  display: flex;
-  align-items: center;
-  color: var(--dgray);
-  letter-spacing: 1px;
-  font-size: 20px;
-  font-weight: 300;
-}
-
-.header__tel::before {
-  content: "";
-  background: url("../img/ico-tel.svg") no-repeat 0 0;
-  background-size: contain;
-  width: 13px;
-  height: 13px;
-  margin-right: 10px;
-}
-
-.header__call {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  text-align: center;
-  background: var(--green);
-  border-radius: 50%;
-  cursor: pointer;
-  -webkit-animation: beat 1.5s ease 0s infinite;
-          animation: beat 1.5s ease 0s infinite;
-}
-
-.header__call i {
-  display: block;
-  width: 14px;
-  height: 14px;
-  background: url("../img/ico-tel--white.svg") no-repeat center/contain;
-  font-size: 0;
-}
-
-.header__call:before, .header__call:after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: var(--green);
-  opacity: 0.4;
-  border-radius: inherit;
-}
-
-.header__call:before {
-  z-index: -2;
-  -webkit-animation: beat-before 1.5s ease 100ms infinite;
-          animation: beat-before 1.5s ease 100ms infinite;
-}
-
-.header__call:after {
-  z-index: -1;
-  -webkit-animation: beat-after 1.5s ease 200ms infinite;
-          animation: beat-after 1.5s ease 200ms infinite;
-}
-
-.header__nav {
-  background: #fff;
-  position: relative;
-}
-
-.header__nav ul {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  list-style: none;
-}
-
-.header__nav ul li a {
-  display: block;
-  padding: 6px 35px;
-  color: var(--dgray);
-  font-size: 15px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  white-space: nowrap;
-  transition: 0.3s;
-}
-
-.header__nav ul li a:hover {
-  color: var(--green);
-}
-
-.header__nav ul li.current a {
-  color: var(--green);
-}
-
-.header__navline {
-  background: rgba(0, 0, 0, 0.1);
-  width: 100%;
-  height: 1px;
-}
-
-.header__navline-indicator {
-  position: absolute;
-  top: 0;
-  height: inherit;
-  background-color: var(--green);
-  transition: all .3s ease;
+  box-shadow: 0 1px 3px 0 rgba(255, 255, 255, 0);
+  transition: 0.4s box-shadow;
 }
 
 .header[data-shrink='true'] {
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
 }
 
-.header[data-shrink='true'] .header__top {
-  height: 60px;
+.header__top {
+  height: 25px;
+  background-image: linear-gradient(to right, #fff 10%, #f2f2f2);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.header__dep {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--dgray);
+}
+
+.header__info {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 25px;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.7px;
+  color: var(--green);
+}
+
+.header__info::before {
+  content: '';
+  background: no-repeat center/contain;
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.header__info--tel::before {
+  background-image: url("../img/ico-tel.svg");
+}
+
+.header__info--mail::before {
+  background-image: url("../img/ico-mail.svg");
+}
+
+.header__middle {
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 15px;
+}
+
+.header__logo {
+  background: url("../img/logo.png") no-repeat center/contain;
+  display: block;
+  width: 150px;
+  height: 50px;
+  align-self: flex-start;
+  font-size: 0;
+  flex-shrink: 0;
+}
+
+.header__navlist {
+  display: flex;
+  list-style: none;
+}
+
+.header__navlist li a {
+  display: block;
+  padding: 25px 30px;
+  font-family: 'Roboto';
+  font-size: 15px;
+  line-height: 1.7;
+  white-space: nowrap;
+  color: var(--dgray);
+}
+
+.header__navlist li a span {
+  position: relative;
+}
+
+.header__navlist li a span::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--green);
+  opacity: 0;
+  transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s, -webkit-transform 0.3s;
+  -webkit-transform: translateY(15px);
+          transform: translateY(15px);
+}
+
+.header__navlist li a:hover {
+  color: var(--green);
+}
+
+.header__navlist li a:hover span::after {
+  opacity: 1;
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
+}
+
+.header__navlist li.current a {
+  color: var(--green);
+}
+
+.header__navlist li.current a span::after {
+  opacity: 1;
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
+}
+
+.header__call {
+  font-family: 'Roboto';
+  font-size: 14px;
+  color: var(--green);
+  width: 150px;
+  height: 35px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--green);
+  border-radius: 22px;
+  transition: 0.5s all;
+  flex-shrink: 0;
+}
+
+.header__call:hover {
+  background-color: var(--green);
+  color: #fff;
 }
 
 .header__burger {
@@ -2667,8 +2647,18 @@ main {
 
 /* ANIMATION END */
 /*==========  Desktop First  ==========*/
+/* Very Large Screens */
+@media only screen and (max-width: 1300px) {
+  .header__navlist li a {
+    padding: 25px 15px;
+  }
+}
+
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
+  .header__navlist li a {
+    padding: 25px 10px;
+  }
   .heading__txt {
     flex-basis: 45%;
   }
@@ -2720,12 +2710,14 @@ main {
   .header__burger {
     display: block;
   }
-  .header__mail {
-    display: none;
-  }
   .header__nav {
     display: none;
-    margin: 0 -15px;
+    position: absolute;
+    top: 100px;
+    right: 0;
+    width: 100%;
+    max-width: 500px;
+    max-height: calc(100vh - 50px);
   }
   .header__nav.active {
     display: block;
@@ -2735,18 +2727,20 @@ main {
             transform-origin: center top;
     overflow-y: auto;
   }
-  .header__nav ul {
+  .header__navlist {
     flex-direction: column;
     background-color: #fff;
   }
-  .header__nav ul li a {
+  .header__navlist li a {
+    padding: 10px;
     border-top: 1px solid rgba(65, 65, 65, 0.2);
     color: var(--dgray);
     font-weight: 500;
-    border-radius: 0;
-    text-align: left;
   }
-  .header__nav ul li.current a {
+  .header__navlist li a span::after {
+    display: none;
+  }
+  .header__navlist li.current a {
     background: var(--green);
     border-top: none;
     color: #fff;
@@ -2823,23 +2817,28 @@ main {
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
   .header__top {
+    display: none;
+  }
+  .header__middle {
     height: 50px;
-    padding-right: 0;
+    padding: 0;
   }
   .header__logo {
     height: 35px;
+    align-self: center;
   }
-  .header__rside {
-    flex-grow: 0;
-  }
-  .header__tel {
-    display: none;
+  .header__nav {
+    top: 50px;
   }
   .header__call {
+    display: none;
     position: fixed;
     z-index: 4;
     right: 15px;
     bottom: 15px;
+  }
+  .main {
+    padding-top: 50px;
   }
   .about__operator-4, .about__operator-2 {
     max-width: initial;
