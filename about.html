@@ -9,9 +9,10 @@
 	<meta name="msapplication-navbutton-color" content="#000">
 	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
 	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Roboto:300,400,500,700&amp;subset=cyrillic">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700|Roboto:300,400,500,700&amp;subset=cyrillic">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"/>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css">
 	<link rel="stylesheet" href="css/main.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js" defer></script>
@@ -19,74 +20,34 @@
 	<script src="js/scripts.js" defer></script>
 </head>
 
-
 <body>
-
 	<header class="header">
 		<div class="header__inner container">
-			<div class="header-grid">
-				<div class="header-grid__left">
-					<a href="/" class="header__logo">
-						<img src="/img/logo.png" alt="Cartli">
-					</a>
-				</div>
-				<div class="header-grid__center">
-					<button type="button" class="btn btn--green header__callback open-modal" data-modal="#modalCall">Перезвоните мне</button>
-				</div>
-				<div class="header-grid__right">
-					<div class="header__contacts">
-						<div class="header__contacts-info">
-							<div class="header__contacts-ico">
-								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="16" height="16" viewBox="0 0 348.077 348.077" xml:space="preserve">
-									<g>
-										<path d="M340.273,275.083l-53.755-53.761c-10.707-10.664-28.438-10.34-39.518,0.744l-27.082,27.076 c-1.711-0.943-3.482-1.928-5.344-2.973c-17.102-9.476-40.509-22.464-65.14-47.113c-24.704-24.701-37.704-48.144-47.209-65.257     c-1.003-1.813-1.964-3.561-2.913-5.221l18.176-18.149l8.936-8.947c11.097-11.1,11.403-28.826,0.721-39.521L73.39,8.194 C62.708-2.486,44.969-2.162,33.872,8.938l-15.15,15.237l0.414,0.411c-5.08,6.482-9.325,13.958-12.484,22.02     C3.74,54.28,1.927,61.603,1.098,68.941C-6,127.785,20.89,181.564,93.866,254.541c100.875,100.868,182.167,93.248,185.674,92.876 c7.638-0.913,14.958-2.738,22.397-5.627c7.992-3.122,15.463-7.361,21.941-12.43l0.331,0.294l15.348-15.029     C350.631,303.527,350.95,285.795,340.273,275.083z" fill="#40a247" />
-									</g>
-								</svg>
-							</div>
-							<div class="header__contacts-num">
-								<p>Call now:</p>
-								<b>586 21 46</b>
-							</div>
-						</div>
-					</div>
-					<div class="header__social">
-						<a href="#" class="header__social-facebook" title="Facebook">
-							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 155.139 155.139" xml:space="preserve" width="17" height="17">
-								<g>
-									<path d="M89.584,155.139V84.378h23.742l3.562-27.585H89.584V39.184   c0-7.984,2.208-13.425,13.67-13.425l14.595-0.006V1.08C115.325,0.752,106.661,0,96.577,0C75.52,0,61.104,12.853,61.104,36.452   v20.341H37.29v27.585h23.814v70.761H89.584z" fill="#6e6e6e"/>
-								</g>
-							</svg>
-						</a>
-						<a href="#" class="header__social-twitter" title="Twitter">
-							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 612 612" xml:space="preserve" width="17" height="17">
-								<g>
-									<path d="M612,116.258c-22.525,9.981-46.694,16.75-72.088,19.772c25.929-15.527,45.777-40.155,55.184-69.411    c-24.322,14.379-51.169,24.82-79.775,30.48c-22.907-24.437-55.49-39.658-91.63-39.658c-69.334,0-125.551,56.217-125.551,125.513    c0,9.828,1.109,19.427,3.251,28.606C197.065,206.32,104.556,156.337,42.641,80.386c-10.823,18.51-16.98,40.078-16.98,63.101    c0,43.559,22.181,81.993,55.835,104.479c-20.575-0.688-39.926-6.348-56.867-15.756v1.568c0,60.806,43.291,111.554,100.693,123.104    c-10.517,2.83-21.607,4.398-33.08,4.398c-8.107,0-15.947-0.803-23.634-2.333c15.985,49.907,62.336,86.199,117.253,87.194    c-42.947,33.654-97.099,53.655-155.916,53.655c-10.134,0-20.116-0.612-29.944-1.721c55.567,35.681,121.536,56.485,192.438,56.485    c230.948,0,357.188-191.291,357.188-357.188l-0.421-16.253C573.872,163.526,595.211,141.422,612,116.258z" fill="#6e6e6e"/>
-								</g>
-							</svg>
-						</a>
-					</div>
-					<div class="header__hamburger">
-						<div class="header__hamburger-inner"></div>
-					</div>
-				</div>
+			<div class="header__top">
+				<p class="header__dep">Связаться с отделом продаж:</p>
+				<a class="header__info header__info--tel" href="tel: +380445864155">+38 (044) 586-41-55</a>
+				<a class="header__info header__info--mail" href="mailto: info@cartli.ua">info@cartli.ua</a>
 			</div>
-			<div class="headbar">
-				<div class="headbar__line">
-					<span class="headbar__line-indicator"></span>
-				</div>
-				<nav class="headbar__nav">
-					<ul class="headbar__nav-list">
-						<li><a href="#home">Главная</a></li>
-						<li class="current"><a href="about.html">О нас</a></li>
-						<li><a href="bcases.html">Кейсы</a></li>
-						<li><a href="blog.html">Блог</a></li>
-						<li><a href="vacancies.html">Вакансии</a></li>
-						<li><a href="contacts.html">Контакты</a></li>
+			<div class="header__middle">
+				<a class="header__logo" href="/" >Cartli</a>
+				<nav class="header__nav">
+					<ul class="header__navlist">
+						<li class="current"><a href="/"><span>Главная</span></a></li>
+						<li><a href="#o-nas"><span>О нас</span></a></li>
+						<li><a href="#kejsy"><span>Кейсы</span></a></li>
+						<li><a href="#uslugi"><span>Услуги</span></a></li>
+						<li><a href="#articles"><span>Публикации</span></a></li>
+						<li><a href="#news"><span>Новости</span></a></li>
+						<li><a href="#vakansii"><span>Вакансии</span></a></li>
+						<li><a href="#kontakty"><span>Контакты</span></a></li>
 					</ul>
 				</nav>
+				<button type="button" class="header__call open-modal" data-modal="#modalCall">Перезвоните мне</button>
+				<button type="button" class="header__burger"><div class="header__burger-in"></div></button>
 			</div>
 		</div>
 	</header>
+
 
 
 	<main class="main container">
@@ -111,10 +72,10 @@
 					</figure>
 					<article class="company__article">
 						<h2 class="company__title">Контакт-центр для увеличения прибыли и быстрого развития бизнеса в любой точке мира</h2>
-						<p>Компания Cartli за 11 лет на рынке превратилась из новичка в лидера, благодаря усилиям команды профессионалов-лучших в данной области.</p>
-						<p>Cartli – аутсорсинговый контактный центр, который занимается информированием по голосовым каналам связи и обработкой обращений в интересах организации-заказчика.</p>
-						<p>Компания получила международный аттестат соответствия информационной системы согласно стандартам безопасности, ISO/IEC 27001:2005.</p>
-						<p><b>Сегодня контакт-центр Cartli – это:</b></p>
+							<p>Компания Cartli за 11 лет на рынке превратилась из новичка в лидера, благодаря усилиям команды профессионалов-лучших в данной области.</p>
+							<p>Cartli – аутсорсинговый контактный центр, который занимается информированием по голосовым каналам связи и обработкой обращений в интересах организации-заказчика.</p>
+							<p>Компания получила международный аттестат соответствия информационной системы согласно стандартам безопасности, ISO/IEC 27001:2005.</p>
+							<p><b>Сегодня контакт-центр Cartli – это:</b></p>
 						<ul>
 							<li>Лучшие профессионалы в области своего дела;</li>
 							<li>Обработка в день более 100 тысяч входящих вызовов, превосходный уровень удовлетворенности клиентов, достигающий 90% в некоторых проектах, а также высокий уровень решения вопросов клиентов с первого обращения, приближающийся к 80% по ряду проектов;</li>
@@ -124,9 +85,28 @@
 					</article>
 				</div>
 				<div class="company__advantages">
-					<article class="company__article">
+					<h3 class="company__title">Преимущества call-центра Cartli</h3>
+					<p>Аутсорсинговый call центр Cartli ведет проекты на разных языках: русский, украинский, немецкий и английский. Контакт-центр ориентирован на внедрение современных маркетинговых технологий и предлагает высокое качество ведения проектов, что есть очевидными преимуществом сотрудничества с компанией Сartli</p>
+					<div class="advantages">
+						<ul class="advantages__list">
+							<li class="advantages__item advantages__item--profit">
+								<h4 class="advantages__title">Значительное сокращение расходов</h4>
+								<p class="advantages__text">Не требуется вложений в организацию рабочих мест, поиск и подготовку персонала, расходные материалы и прочие статьи расходов. Вы арендуете штат операторов на необходимое время, пользуясь полностью готовым «набором» для реализации проекта.</p>
+							</li>
+							<li class="advantages__item advantages__item--savetime">
+								<h4 class="advantages__title">Экономия времени</h4>
+								<p class="advantages__text">Контакт-центр Cartli работает 24 часа в сутки 7 дней в неделю, обеспечивая максимально быстрый результат работы с неизменно высоким качеством. Эффективность и грамотность – приоритетные качества наших операторов.</p>
+							</li>
+							<li class="advantages__item advantages__item--result">
+								<h4 class="advantages__title">Удобная оценка результатов</h4>
+								<p class="advantages__text">Контакт-центр Cartli позволяет наглядно оценить результаты маркетинговой компании и при необходимости вовремя скорректировать направление развития.</p>
+							</li>
+						</ul>
+					</div>
+
+					<!-- <article class="company__article">
 						<h3 class="company__title">Преимущества call центра Cartli</h3>
-						<p>Аутсорсинговый call центр Cartli ведет проекты на разных языках: русский, украинский, немецкий и английский. Ориентированные на внедрение современных маркетинговых технологий, мы хотим и можем предложить вам высокое качество ведения проектов. Очевидными преимуществами сотрудничества с нашей компанией являются следующие факторы:</p>
+						<p>Аутсорсинговый call центр Cartli ведет проекты на разных языках: русский, украинский, немецкий и английский. Контакт-центр ориентирован на внедрение современных маркетинговых технологий и предлагает высокое качество ведения проектов, что есть очевидными преимуществом сотрудничества с компанией Сartli</p>
 					</article>
 					<div class="company__profit">
 						<button class="profit__btn">Значительное сокращение расходов</button>
@@ -135,13 +115,13 @@
 						</div>
 						<button class="profit__btn">Экономия времени</button>
 						<div class="profit__txt">
-							<p>Контакт центр Cartli работает 24 часа в сутки 7 дней в неделю, обеспечивая максимально быстрый результат работы с неизменно высоким качеством. Эффективность и грамотность – приоритетные качества наших операторов.</p>
+							<p>Контакт-центр Cartli работает 24 часа в сутки 7 дней в неделю, обеспечивая максимально быстрый результат работы с неизменно высоким качеством. Эффективность и грамотность – приоритетные качества наших операторов.</p>
 						</div>
 						<button class="profit__btn">Удобная оценка результатов</button>
 						<div class="profit__txt">
-							<p>Контакт центр Cartli позволяет наглядно оценить результаты маркетинговой компании и при необходимости вовремя скорректировать направление развития.</p>
+							<p>Контакт-центр Cartli позволяет наглядно оценить результаты маркетинговой компании и при необходимости вовремя скорректировать направление развития.</p>
 						</div>
-					</div>
+					</div> -->
 				</div>
 				<div class="company__consultation">
 					<div class="consult__form">
@@ -175,7 +155,7 @@
 			</div>
 		</section>
 
-<!-- 
+
 		<section class="about_us">
 			<div class="container">
 				<div class="vacancy-a about_us-a">
@@ -266,7 +246,7 @@
 					</p>
 				</div>
 			</div>
-		</section> -->
+		</section>
 	
 
 	</main>
@@ -287,14 +267,14 @@
 				<a href="#">Контакты</a>
 			</div>
 			<div class="footer__social">
-				<a href="#" class="footer__social-facebook">
+				<a href="#" class="footer__social-facebook" title="Facebook">
 					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 155.139 155.139" xml:space="preserve" width="17" height="17">
 						<g>
-							<path id="f_1_" d="M89.584,155.139V84.378h23.742l3.562-27.585H89.584V39.184   c0-7.984,2.208-13.425,13.67-13.425l14.595-0.006V1.08C115.325,0.752,106.661,0,96.577,0C75.52,0,61.104,12.853,61.104,36.452   v20.341H37.29v27.585h23.814v70.761H89.584z" fill="#fff"></path>
+							<path d="M89.584,155.139V84.378h23.742l3.562-27.585H89.584V39.184   c0-7.984,2.208-13.425,13.67-13.425l14.595-0.006V1.08C115.325,0.752,106.661,0,96.577,0C75.52,0,61.104,12.853,61.104,36.452   v20.341H37.29v27.585h23.814v70.761H89.584z" fill="#fff"></path>
 						</g>
 					</svg>
 				</a>
-				<a href="#" class="footer__social-twitter">
+				<a href="#" class="footer__social-twitter" title="Twitter">
 					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 612 612" xml:space="preserve" width="17" height="17">
 						<g>
 							<path d="M612,116.258c-22.525,9.981-46.694,16.75-72.088,19.772c25.929-15.527,45.777-40.155,55.184-69.411    c-24.322,14.379-51.169,24.82-79.775,30.48c-22.907-24.437-55.49-39.658-91.63-39.658c-69.334,0-125.551,56.217-125.551,125.513    c0,9.828,1.109,19.427,3.251,28.606C197.065,206.32,104.556,156.337,42.641,80.386c-10.823,18.51-16.98,40.078-16.98,63.101    c0,43.559,22.181,81.993,55.835,104.479c-20.575-0.688-39.926-6.348-56.867-15.756v1.568c0,60.806,43.291,111.554,100.693,123.104    c-10.517,2.83-21.607,4.398-33.08,4.398c-8.107,0-15.947-0.803-23.634-2.333c15.985,49.907,62.336,86.199,117.253,87.194    c-42.947,33.654-97.099,53.655-155.916,53.655c-10.134,0-20.116-0.612-29.944-1.721c55.567,35.681,121.536,56.485,192.438,56.485    c230.948,0,357.188-191.291,357.188-357.188l-0.421-16.253C573.872,163.526,595.211,141.422,612,116.258z" fill="#fff"></path>
@@ -304,5 +284,30 @@
 			</div>
 		</div>
 	</footer>
+
+
+	<button type="button" id="up">To Top</button>
+	
+
+	<!-- 	/* POPUP START */ -->
+	<div id="modalCall" class="modal-box">
+		<div class="modal-box__content">
+			<div class="modal-box__close"></div>
+			<h3>Мы вам перезвоним</h2>
+			<form method="" action="#">
+				<input name="name" type="text" placeholder="Имя">
+				<input name="phone" type="tel" placeholder="Телефон">
+				<button type="submit" class="btn btn--green">Отправить</button>
+			</form>
+		</div>
+	</div>
+
+	<div id="modalOk" class="modal-box">
+		<div class="modal-box__content">
+			<div class="modal-box__close"></div>
+			<h4>Спасибо! Мы свяжемся с вами в ближайшее время</h4>
+		</div>
+	</div>
+	<!-- /* POPUP END */ -->
 </body>
 </html>

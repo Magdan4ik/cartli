@@ -19,7 +19,8 @@ window.addEventListener('DOMContentLoaded', function() {
 			About      = d.querySelector(".company"),
 			Vslider    = d.querySelector(".vacancy-c__slider"),
 			Blog       = d.querySelector(".blog__main"),
-			header     = d.querySelector("header");
+			header     = d.querySelector("header"),
+			briefcase  = d.querySelector(".briefcase");
 			
 
 
@@ -180,8 +181,91 @@ window.addEventListener('DOMContentLoaded', function() {
 					$bslider.slick('refresh');
 				});
 			};
+
 	};
 	/* Bcases tabs END*/
+
+
+	if(briefcase) {
+		(function(){
+
+			const btn    = briefcase.querySelectorAll('.briefcase__navitem');
+			const slider = briefcase.querySelector('.briefcase__content');
+			const slides = briefcase.querySelectorAll('.briefcase__article');
+
+			$(slider)
+			.on('init', function(event, slick, currentSlide) {
+				let cur = $(slick.$slides[slick.currentSlide]);
+				let next = cur.next();
+				let prev = cur.prev();
+					prev.addClass('slick-sprev');
+					next.addClass('slick-snext');
+					cur.removeClass('slick-snext').removeClass('slick-sprev');
+					slick.$prev = prev;
+					slick.$next = next;
+			})
+			.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+			let cur = $(slick.$slides[nextSlide]);
+				slick.$prev.removeClass('slick-sprev');
+					slick.$next.removeClass('slick-snext');
+				next = cur.next(),
+				prev = cur.prev();
+					prev.addClass('slick-sprev');
+					next.addClass('slick-snext');
+					slick.$prev = prev;
+					slick.$next = next;
+					cur.removeClass('slick-next').removeClass('slick-sprev');
+			});
+			$(slider).slick({
+				speed: 1000,
+				arrows: true,
+				dots: false,
+				focusOnSelect: true,
+				prevArrow: '<button class="slick-arrow--prev"> prev</button>',
+				nextArrow: '<button class="slick-arrow--next"> next</button>',
+				infinite: true,
+				centerMode: true,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				centerPadding: '0',
+				swipe: true,
+				slide: '.briefcase__article--active'
+			});
+
+			btn.forEach(el => {
+				el.addEventListener('click', e => {
+					e.preventDefault();
+					console.log(el);
+					btn.forEach(ell => ell.classList.remove('briefcase__navitem--active'));
+					el.classList.add('briefcase__navitem--active');
+					newBriefcases(el);
+				});
+			});
+
+			function newBriefcases(el) {
+				if(!el) el = briefcase.querySelector('.briefcase__navitem--active');
+				briefcase.querySelectorAll('.briefcase__article').forEach(el => el.classList.remove('briefcase__article--active'));
+				if (el.dataset.case == 'case-all') {
+					$('.briefcase__article').removeClass('slick-sprev slick-snext');
+					slides.forEach(el => el.classList.add('briefcase__article--active'));
+					$(slider).slick('refresh');
+				} else {
+					let thisSlider = briefcase.querySelectorAll('.briefcase__article[data-case='+ el.dataset.case +']');
+					thisSlider.forEach(el => el.classList.add('briefcase__article--active'));
+					$(slider).slick('refresh');
+				}
+
+			};
+			newBriefcases();
+
+
+		}());
+
+	};
+
+
+
+
 
 
 	/* Service tabs */
