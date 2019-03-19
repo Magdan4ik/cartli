@@ -1,0 +1,1260 @@
+
+/* MAIN HEADING START*/
+.heading
+	height: 390px
+	background: url('../img/heading.jpg') no-repeat center top
+	display: flex
+	align-items: center
+	padding-bottom: 50px
+	font-family: "Roboto", sans-serif
+	overflow: hidden
+	&__txt
+		flex-basis: 40%
+		padding: 0 20px
+		text-align: right
+		color: #fff
+	&__title
+		strong
+			display: block
+			font-size: 30px
+			font-weight: normal
+			line-height: normal
+			b
+				font-size: 56px
+				color: var(--green)
+			+ strong
+				font-size: 42px
+				font-weight: bold
+	&__subtitle
+		font-size: 20px
+		font-weight: 300
+		letter-spacing: 0.5px
+		line-height: 2.5
+		text-transform: uppercase
+/* MAIN HEADING END*/
+
+/* MAIN INFORM START*/
+.inform
+	display: grid
+	grid-template-columns: 1fr 1fr
+	grid-gap: 50px
+	.title
+		text-align: left
+/* MAIN INFORM END*/
+
+
+/* SECTION SERVICE END */
+.service
+	&__title
+	&__subtitle
+		font-size: 22px
+		font-weight: 300
+		font-style: normal
+		line-height: 1.1
+		color: #bebebe
+		margin-bottom: 20px
+		&-upp
+			text-transform: uppercase
+.servblock
+	display: flex
+	&__services
+		position: relative
+		max-width: 310px
+		flex-shrink: 0
+	&__service
+		list-style: none
+		border-radius: 10px 0 0 10px
+		background: linear-gradient(to bottom, #6ac28e, #3ec0ab)
+		color: #fff
+		font-weight: 300
+		text-align: center
+		li
+			position: relative
+			padding: 30px
+			z-index: 2
+			cursor: pointer
+		&-selected
+			background: #45ad84
+			position: absolute
+			top: 0
+			width: 100%
+			height: 165px
+			border-radius: 10px 0 0 10px
+			will-change: top, height
+			mix-blend-mode: luminosity
+			transition: 0.3s all
+	&__name
+		margin-bottom: 20px
+		font-family: 'Roboto', sans-serif
+		font-size: 20px
+		font-weight: bold
+		color: #fff
+	&__desc
+		font-size: 14px
+		font-weight: 300
+		font-family: 'Roboto', sans-serif
+		line-height: normal
+	&__info
+		background: rgba(148, 247, 213, 0.3)
+		width: 100%
+		padding: 30px
+		border-radius: 0px 10px 10px 0
+	&__infolist
+		list-style: none
+		display: none
+		li
+			position: relative
+			padding-left: 20px
+			margin-bottom: 20px
+			&::before
+				content: ""
+				background: url('../img/new__cartli/icons/bullet--black.svg') no-repeat center
+				width: 12px
+				height: 12px
+				position: absolute
+				left: 0
+				top: 8px
+			&:hover::before
+				background-image: url('../img/new__cartli/icons/bullet--selected.svg')
+
+			a
+				font-family: 'Roboto', sans-serif
+				font-size: 16px
+				font-weight: 300
+				border-bottom: 1px solid transparent
+				color: var(--lgray)
+				transition: 0.3s all
+				&:hover
+					color: var(--green)
+					border-color: var(--green)
+		&--active
+			display: block
+/* SECTION SERVICE END*/
+
+
+/* SECTION ABOUT START */
+.about
+	&__subtitle
+		font-size: 18px
+		line-height: normal
+		color: #3a3a3a
+		margin-bottom: 20px
+	&__desc
+		font-size: 14px
+		line-height: 2
+		color: var(--lgray)
+		p
+			margin-bottom: 35px
+/* SECTION ABOUT END */
+
+/* SECTION CLIENTS START */
+.clients
+	padding-top: 45px
+	&__title
+		text-align: center
+		padding-bottom: 30px
+	&__sliders
+		background: #f7f7fb
+		position: relative
+		padding: 30px 0
+	&__slider-desc
+		font-size: 15px
+		font-weight: 300
+		font-style: italic
+		line-height: 1.5
+		text-align: center
+		color: #3a3a3a
+		margin: 0 44px 25px 44px
+		li
+			b
+				font-style: normal
+				color: green
+
+
+	&__slider-img
+		display: flex
+		align-items: center
+		li
+			figure
+				img
+					margin: 0 auto
+		.slick-list
+			margin: 0 50px
+		.slick-slide
+			filter: grayscale(1)  opacity(0.2)
+			transform: scale(0.8)
+			transition: 0.5s all
+		.slick-current
+			filter: grayscale(0)  opacity(1)
+			transform: scale(1)
+		.slick-arrow
+			background: url('../img/slider--arrow.svg') no-repeat center/13px
+			height: 100%
+			width: 50px
+			z-index: 2
+			&::before
+				display: none
+		.slick-prev
+			left: 0
+		.slick-next
+			right: 0
+			transform: translate(0,-50%) scale(-1)
+
+/* SECTION CLIENTS END */
+
+
+
+/* SECTION CONTACTS START */
+.contacts
+	display: block
+	padding-top: 45px
+	padding-bottom: 30px
+	&__inner
+
+	&__title
+		padding-bottom: 30px
+		text-align: center
+
+	&__form
+		display: grid
+		grid-template-columns: 1fr 1fr
+		grid-gap: 30px
+		grid-auto-rows: 50px
+		margin: 0 auto
+		margin-bottom: 30px
+		max-width: 1000px
+
+		textarea
+			grid-row: span 2
+			max-height: 200px
+
+		button
+			grid-column: 3
+			grid-row: 3
+			justify-self: end
+		.btn
+			&:hover
+				background-color: var(--dgray)
+				border-color: var(--dgray)
+				color: #fff
+	&__info
+		display: grid
+		grid-template-columns: 1fr max-content
+		grid-gap: 30px
+
+		&-numb
+		&-tel
+			display: inline-block
+			margin-top: 20px
+			a
+				display: block
+				font-family: "Open Sans", sans-serif
+				font-size: 24px
+				line-height: normal
+				color: var(--dgray)
+		&-time
+			display: flex
+			flex-direction: column
+			align-items: flex-end
+			p:first-child
+				margin-top: 15px
+				margin-bottom: auto
+
+
+		&-day
+			font-family: "Open Sans", sans-serif
+			font-size: 24px
+			font-weight: 300
+			line-height: normal
+			color: var(--dgray)
+			&.bolder
+				font-weight: 400
+/* SECTION CONTACTS END */
+
+
+/* BREADCRUMBS START */
+.breadcrumbs
+	margin-bottom: 50px
+	&__inner
+		min-height: 150px
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding: 15px
+		color: #fff
+	&__title
+		flex-basis: 45%
+		font-family: "Roboto", sans-serif
+		font-size: 30px
+		font-weight: 300
+		line-height: 1
+	ul
+		flex-basis: 50%
+		list-style: none
+		font-family: "Roboto", sans-serif
+		font-size: 18px
+		line-height: 1.2
+		text-align: right
+		li
+			display: inline
+			&::after
+				content: ""
+				border: solid #fff
+				border-width: 0 2px 2px 0
+				display: inline-block
+				vertical-align: middle
+				margin: 0 15px 0 10px
+				padding: 3px
+				transform: rotate(-45deg)
+			&::last-child
+				padding-right: 0
+				&::after
+					display: none
+			span
+				cursor: default
+				font-size: 16px
+			a
+				color: #fff
+				font-size: 16px
+				font-weight: 300
+				&:hover
+					border-bottom: 1px solid #fff
+/* BREADCRUMBS END */
+
+/* PAGINATION START */
+.pagination
+	display: flex
+	justify-content: center
+	align-items: center
+	padding: 20px 0
+	list-style-type: none
+	li
+		margin: 10px
+		border-radius: 6px
+		border: 1px solid rgba(150, 150, 150, 0.5)
+		transition: 0.2s
+		&:hover,
+		&.current
+			background-color: var(--green)
+			border-color: var(--green)
+			a
+				color: #fff
+		&.current
+			a
+				cursor: default
+		a
+			width: 35px
+			height: 35px
+			display: inline-flex
+			justify-content: center
+			align-items: center
+			color: rgba(62, 62, 62, 0.5)
+			font-size: 18px
+			font-weight: bold
+			font-family: "Roboto", sans-serif
+			line-height: 1
+/* PAGINATION END */
+
+
+/* PAGE BRIEFCASE START*/
+.briefcase
+	padding-bottom: 100px
+	&__nav
+		margin-bottom: 20px
+	&__navlist
+			list-style: none
+			display: flex
+			flex-wrap: wrap
+			justify-content: center
+	&__navitem
+		margin: 5px 12px
+		a
+			background: #fff
+			width: auto
+			padding: 0 15px
+			font-size: 14px
+			color: var(--lgray)
+			text-transform: uppercase
+			transition: 0.7s all, 0.3s color
+			border: 1px solid rgba(110, 110, 110, 0.2)
+			user-select: none
+		&--active
+			a
+				background-color: var(--green)
+				color: #fff
+				box-shadow: 0 1px 10px 0 var(--green)
+	&__content
+
+		.slick-list
+			padding-left: 30% !important
+			padding-right: 30% !important
+			overflow: initial
+			line-height: 1
+		.slick-track
+			max-width: 100% !important
+			transform: translate3d(0, 0, 0) !important
+			perspective: 100px
+		.slick-slide
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			opacity: 0
+			width: 100% !important
+			transform: translate3d(0, 0, 0) scale(0.8)
+			transition: transform .7s, opacity .5s
+			cursor: pointer
+		.slick-snext,
+		.slick-sprev
+			display: block
+		.slick-current
+			opacity: 1
+			position: relative
+			display: block
+			z-index: 2
+			cursor: initial
+			transform: translate3d(0, 0, 0) scale(1)
+			.btn
+				background: #fff
+				color: var(--dgray)
+		.slick-snext
+			opacity: 1
+			transform: translate3d(75%, 0, 0px) scale(0.8)
+			z-index: 1
+		.slick-sprev
+			opacity: 1
+			transform: translate3d(-75%, 0, 0px) scale(0.8)
+		.slick-arrow
+			position: absolute
+			top: 0
+			font-size: 0
+			height: 100%
+			width: 50px
+			z-index: 2
+			transform: scaleX(0.6)
+			&:hover::before
+				opacity: 0.4
+			&::before
+				font-size: 100px
+				opacity: 0.2
+				transition: 0.3s
+			&--prev
+				left: 0
+				&::before
+					content: "\2039"
+			&--next
+				right: 0
+				&::before
+					content: "\203A"
+
+	&__article
+		display: none
+		&--active
+			display: block
+		background: no-repeat center / cover
+		position: relative
+		height: 550px
+		overflow: hidden
+		&::before
+			content: ""
+			position: absolute
+			left: 0
+			right: 0
+			top: 0
+			bottom: 0
+			width: 100%
+			height: 100%
+			background: rgba(24,33,51,0.7)
+			z-index: 1
+		&-title
+			font-size: 22px
+			font-weight: 900
+			text-transform: uppercase
+			margin-bottom: 30px
+		&-cat
+			position: relative
+			font-size: 15px
+			padding-bottom: 10px
+			text-transform: uppercase
+			&::after
+				position: absolute
+				bottom: 0
+				left: 0
+				right: 0
+				content: ""
+				width: 70px
+				height: 2px
+				margin: 0 auto
+				background: #fff
+		&-desc
+			margin: 50px 0 20px
+			font-size: 14px
+			line-height: 2
+		&-link
+			flex-shrink: 0
+			margin-top: auto
+			border: 1px solid #fff
+		&-inner
+			position: relative
+			height: 100%
+			display: flex
+			flex-direction: column
+			align-items: center
+			padding: 70px 20px
+			color: #fff
+			z-index: 2
+			text-align: center
+/* INNER PAGES STYLE START */
+.bcase--inner
+	background-color: #fff
+	padding-bottom: 100px
+.bcase
+	&__page
+		max-width: 1200px
+		margin: 0 auto
+		padding: 0 15px
+		padding-bottom: 50px
+	&__article
+		&-img
+			width: 100%
+			height: 400px
+			margin-bottom: 30px
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover
+		&-title
+			margin-bottom: 20px
+			font-family: "Roboto", sans-serif
+			font-size: 34px
+			font-weight: bold
+			line-height: normal
+		&-content
+			font-family: "Roboto", sans-serif
+			font-weight: 300
+
+			p
+				margin-bottom: 15px
+	&__comments
+		h2
+			font-weight: 500
+
+.connect
+	&__inner
+		padding-bottom: 50px
+	&__content
+		display: grid
+		grid-template-columns: 2fr 3fr
+		grid-gap: 30px
+	&__lside
+	&__title
+		font-family: 'Roboto', sans-serif
+		font-size: 36px
+		font-weight: 300
+		line-height: normal
+		color: var(--dgray)
+		margin-bottom: 30px
+	&__subtitle
+		font-size: 16px
+		font-weight: 300
+		line-height: 1.63
+		color: var(--dgray)
+	&__phone
+		padding: 15px 0
+		margin: 30px 0
+		border-top: 1px solid rgba(62,62,62, 0.2)
+		border-bottom: 1px solid rgba(62,62,62, 0.2)
+		a
+			display: block
+			font-family: "Open Sans", sans-serif
+			font-size: 24px
+			line-height: 2
+			color: var(--lgray)
+			opacity: 0.5
+			transition: 0.3s opacity
+			&:hover
+				opacity: 0.8
+	&__numbers
+		display: inline-block
+	&__social
+		display: inline-grid
+		grid-template-columns: 1fr 1fr
+		grid-gap: 20px
+		> a
+			width: 40px
+			height: 40px
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			border-radius: 50%
+			transition: 0.3s
+			&:hover
+				background-color: var(--green)
+				path
+					transition: 0.3s
+					fill: #fff
+	&__rside
+	&__form
+		display: grid
+		grid-gap: 30px
+
+		.btn
+			&:hover
+				background-color: var(--dgray)
+				border-color: var(--dgray)
+				color: #fff
+	&__slider
+		.vacancy-d
+			margin-top: 30px
+
+.gmap
+	height: 550px
+	width: 100%
+/* INNER PAGES END */
+
+
+
+/* VACANCY START */
+.vacancy-a
+	display: grid
+	grid-template-columns: 1fr max-content
+	grid-gap: 30px
+	padding: 50px 0
+	&__left
+		&--title
+			font-size: 36px
+			color: var(--dgray)
+			font-family: 'Roboto', sans-serif
+			font-weight: 300
+			line-height: normal
+			margin-bottom: 30px
+		&--text
+			line-height: 1.56
+			font-size: 16px
+			color: var(--lgray)
+			margin-bottom: 34px
+		&--boldword
+			font-size: 18px
+			color: var(--dgray)
+			font-family: 'Roboto', sans-serif
+			font-weight: 500
+		&--email
+			font-size: 16px
+			color: var(--green)
+			font-family: 'Roboto', sans-serif
+			font-weight: 300
+		p
+			margin-bottom: 20px
+
+.vacancy-b
+	&--example-c
+		display: flex
+		justify-content: center
+	&--example
+		font-family: 'Roboto'
+		font-size: 28px
+		font-weight: 300
+		color: var(--green)
+		text-align: center
+		text-decoration: underline
+		display: block
+		margin: 0 20px 30px 20px
+	&--text
+		&.top
+			margin-bottom: 50px
+		&.bottom
+			padding-bottom: 30px
+			border-bottom: 1px solid rgba(64, 62, 62, 0.2)
+			margin-bottom: 50px
+	&__info
+		display: grid
+		grid-template-columns: 1fr 1fr
+		grid-column-gap: 52px
+		margin-bottom: 50px
+	&__left,
+	&__right
+		&--title
+			font-family: Roboto
+			font-size: 18px
+			font-weight: 500
+			color: var(--dgray)
+			margin-bottom: 18px
+		&--content
+			padding-left: 18px
+			li
+				font-family: Roboto
+				font-size: 16px
+				font-weight: 300
+				line-height: 1.75
+				color: var(--dgray)
+.vacancy-c
+	max-width: 590px
+	margin-bottom: 86px
+	&--title
+		font-family: 'Roboto'
+		font-size: 36px
+		font-weight: 300
+		line-height: 0.72
+		color: var(--dgray)
+		margin-bottom: 50px
+	&__phone
+		border-bottom: 1px solid rgba(64, 62, 62, 0.2)
+		margin-bottom: 32px
+		color: rgba(110,110,110,.2)
+		padding-bottom: 20px
+		&--title,
+		&--number
+			font-family: 'Open Sans'
+			font-weight: 300
+			font-size: 24px
+			opacity: 0.5
+			color: var(--lgray)
+		&--title
+			margin-bottom: 14px
+	&__social
+		padding: 0 12px
+		a:first-of-type
+			margin-right: 40px
+	&__slider
+		height: 86px
+		&-item
+			padding: 0 30px
+			img
+				margin: 0 auto
+				height: 86px
+				object-fit: contain
+				filter: grayscale(1)
+				opacity: 0.5
+				transition: all 0.3s
+		&-item:hover
+			img
+				filter: none
+				opacity: 1
+.vacancy-d
+	margin-bottom: 30px
+/* VACANCY END */
+
+
+
+
+/* ABOUT US START */
+.company
+	&__inner
+
+	&__description
+		position: relative
+		padding-bottom: 30px
+		&::after
+			content: ""
+			background: linear-gradient(to right, rgba(255,255,255,0.2) 0%,rgba(0,0,0,0.2) 50%,rgba(255,255,255,0.2) 100%)
+			width: 100%
+			height: 1px
+			display: block
+			margin: 0 auto
+			position: absolute
+			bottom: 0
+			left: 0
+			right: 0
+
+
+	&__slider
+		visibility: hidden
+		opacity: 0
+		float: right
+		width: 30%
+		margin: 0 0 25px 25px
+		line-height: 1
+		transition: 0.5s opacity
+		&.slick-initialized
+			opacity: 1
+			visibility: visible
+
+	&__slide
+
+	&__article
+		p:not(:last-of-type)
+			margin-bottom: 35px
+		ul
+			list-style: none
+			margin-bottom: 35px
+
+			li
+				display: flex
+				&::before
+					content: "·"
+					font-size: 30px
+					line-height: 1
+					margin: 0 30px 0 20px
+
+	&__title
+		font-size: 36px
+		color: var(--dgray)
+		font-weight: 300
+		line-height: normal
+		margin-bottom: 30px
+
+	&__advantages
+		position: relative
+		padding-top: 45px
+		padding-bottom: 30px
+		&::after
+			content: ""
+			background: linear-gradient(to right, rgba(255,255,255,0.2) 0%,rgba(0,0,0,0.2) 50%,rgba(255,255,255,0.2) 100%)
+			width: 50%
+			margin: 0 auto
+			height: 1px
+			display: block
+			position: absolute
+			bottom: 0
+			left: 0
+			right: 0
+
+	&__consultation
+		padding-top: 50px
+		padding-bottom: 50px
+	&__slogan
+		position: relative
+		background: url('http://ddwwrr.oscorp.pro/assets/templates/cartli/img/about_us-d.jpg') no-repeat 0 0
+		background-size: cover
+		min-height: 160px
+		display: flex
+		align-items: center
+		justify-content: center
+		&::before
+			content: ''
+			display: block
+			position: absolute
+			background: url('http://ddwwrr.oscorp.pro/assets/templates/cartli/img/shape_big.svg') no-repeat 0 0
+			background-size: contain
+			z-index: 1
+			width: 150px
+			height: 150px
+			top: 5%
+			left: 20%
+		p
+			position: relative
+			z-index: 2
+			font-family: 'Roboto', sans-serif
+			font-size: 28px
+			font-weight: 300
+			color: rgb(69, 138, 117)
+.advantages
+	margin-top: 80px
+	&__list
+		display: grid
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr) )
+		grid-gap: 60px 30px
+		list-style: none
+	&__item
+		position: relative
+		padding: 50px 10px 10px
+		font-family: "Roboto", sans-serif
+		text-align: center
+		border: 1px solid #c1c1c1
+		border-radius: 5px
+		transition: 0.3s
+		&:hover
+			border-color: var(--green)
+		&::before
+			content: ""
+			background: #fff no-repeat center
+			width: 80px
+			height: 80px
+			position: absolute
+			top: -40px
+			left: calc(50% - 40px)
+			border: 1px solid
+			border-color: inherit
+			border-radius: 50%
+			z-index: 1
+		&--profit
+			&::before
+				background-image: url('../img/advant__ico--$.svg')
+		&--savetime
+			&::before
+				background-image: url('../img/advant__ico--24.svg')
+				background-size: 45px
+		&--result
+			&::before
+				background-image: url('../img/advant__ico--result.svg')
+	&__title
+		font-size: 18px
+		line-height: normal
+		margin-bottom: 10px
+		font-weight: 500
+		color: var(--dgray)
+	&__text
+		font-size: 14px
+		font-weight: 300
+		line-height: 2
+		color: var(--lgray)
+
+
+.consult
+	&__form
+		max-width: 1000px
+		margin: 0 auto
+		form
+			display: grid
+			grid-template-columns: 1fr 1fr
+			grid-auto-rows: 50px
+			grid-gap: 30px
+			textarea
+				grid-row: span 2
+	&__confirm
+		display: flex
+		justify-content: space-between
+
+	&__title
+		margin-bottom: 30px
+		text-align: center
+		font-family: 'Roboto', sans-serif
+		font-weight: 500
+		font-size: 36px
+		color: var(--dgray)
+		line-height: normal
+	&__subtitle
+		font-family: 'Roboto'
+		font-size: 18px
+		text-align: center
+		color: var(--dgray)
+		line-height: normal
+		margin-bottom: 50px
+
+
+
+
+
+
+
+.hr-1
+	margin: 0
+	border: none
+	border-bottom: 1px solid rgba(64, 62, 62, 0.2)
+.about_us-a
+	.slick-dots li button:before
+		font-size: 10px
+		color: #6E6E6E
+		opacity: 0.2
+	.slick-dots li.slick-active button:before
+		color: #40A247
+		opacity: 1
+	.vacancy-a__right
+		max-width: 650px
+
+.about_us-b
+	grid-template-columns: 1fr 650px
+	position: relative
+	margin-bottom: 50px
+	&:after
+		content: ''
+		width: 150px
+		border-bottom: 1px solid rgba(64, 62, 62, 0.2)
+		position: absolute
+		left: 50%
+		transform: translateX(-50%)
+		bottom: 0
+	.accordion
+		cursor: pointer
+		padding: 20px
+		width: 100%
+		border: none
+		text-align: left
+		outline: none
+		border: 1px solid var(--dgray)
+		font-family: 'Roboto'
+		font-size: 18px
+		font-weight: 300
+		line-height: normal
+		color: var(--dgray)
+		&:not(:last-of-type)
+			border-bottom: none
+		&:after
+			content: '\002B'
+			color: #777
+			font-weight: bold
+			float: right
+			margin-left: 5px
+	.active
+		border-bottom: none
+		& ~ .panel
+			border-left: 1px solid var(--dgray)
+			border-right: 1px solid var(--dgray)
+		&:last-of-type ~ .panel:last-of-type
+			border-bottom: 1px solid var(--dgray)
+		&:after
+			content: "\2212"
+	.panel
+		padding: 0 30px 20px
+		background-color: white
+		overflow: hidden
+		display: none
+		font-family: 'Roboto'
+		font-size: 14px
+		font-weight: 300
+		line-height: 2
+		color: var(--lgray)
+
+.about_us-c
+	max-width: 1170px
+	margin: 0 auto 50px
+	&--title.dot
+		display: flex
+		flex-direction: column
+		justify-content: center
+		text-align: center
+		margin-bottom: 50px
+		&::before
+			margin-right: 0
+			margin-bottom: 20px
+	&--subtitle
+		font-family: 'Roboto'
+		font-size: 18px
+		text-align: center
+		color: rgba(0, 0, 0, 0.87)
+		max-width: 1048px
+		margin: 0 auto
+		line-height: normal
+		margin-bottom: 50px
+	&--after-subtitle
+		font-family: 'Roboto'
+		font-size: 16px
+		color: rgba(0, 0, 0, 0.87)
+		font-weight: normal
+		margin-bottom: 30px
+
+	&__form
+		font-size: 0
+		text-align: center
+		& > *
+			margin-bottom: 30px
+		button[type="submit"]
+			margin-bottom: 0
+			margin: 0 auto
+			&:hover
+				background-color: var(--dgray)
+				border-color: var(--dgray)
+
+		textarea
+			min-height: 174px
+	&__custom-select
+		position: relative
+		ul
+			position: absolute
+			display: none
+			list-style: none
+			background-color: #fff
+			max-width: 1170px
+			left: 0
+			right: 0
+			li
+				font-size: 16px
+		&--input
+			cursor: pointer
+
+		&.open-custom-select
+			input
+				border-bottom-left-radius: 0
+				border-bottom-right-radius: 0
+			ul
+				display: block
+				text-align: left
+				border: solid 1px #e0e0e0
+				border-top: none
+				border-bottom-left-radius: 5px
+				border-bottom-right-radius: 5px
+				li
+					padding: 5px 20px
+					font-size: 14px
+					font-family: "Open Sans", sans-serif
+					font-weight: 300
+					cursor: pointer
+					&:hover
+						background-color: var(--green)
+						color: #fff
+
+.about_us-d
+	background-image: url('../img/about_us-d.jpg')
+	background-repeat: no-repeat
+	background-position: center
+	background-size: cover
+	&__inner
+		max-width: 754px
+		margin: 0 auto
+		padding: 0 15px
+		&--text
+			font-family: 'Roboto'
+			font-size: 28px
+			font-weight: 300
+			line-height: 1.5
+			text-align: center
+			color: rgba(255, 255, 255, 0.87)
+			padding: 62px 0
+			position: relative
+			&:before
+				content: ''
+				display: block
+				position: absolute
+				width: 198px
+				height: 184px
+				background-image: url('../img/shape_big.svg')
+				top: 0
+				left: -20px
+			&:after
+				content: url('../img/shape.svg')
+				display: inline-block
+				vertical-align: super
+				line-height: 10px
+/* ABOUT US END */
+
+
+/* BLOG START */
+.blog
+	padding-bottom: 50px
+	&__articles
+		display: grid
+		grid-template-columns: 1fr 1fr
+		grid-gap: 25px 50px
+		margin-bottom: 15px
+	&__article
+		font-family: 'Roboto', sans-serif
+		color: var(--dgray)
+		font-size: 16px
+		display: flex
+		flex-flow: column wrap
+		padding-bottom: 20px
+		border-bottom: 1px solid rgba(189, 194, 202, 0.3)
+		&-title
+			font-size: 24px
+			font-weight: bold
+			margin-bottom: 15px
+		&-brief
+			font-weight: 300
+		&-more
+			display: inline-flex
+			align-items: center
+			margin-left: auto
+			color: var(--green)
+			font-weight: 500
+			text-decoration: underline
+			transition: 0.3s
+			&::after
+				content: ""
+				border-width: 0 2px 2px 0
+				display: inline-block
+				vertical-align: baseline
+				border-color: var(--green)
+				border-style: solid
+				transform: rotate(-40deg)
+				padding-top: 6px
+				padding-left: 6px
+				margin-left: 3px
+				transition: 0.3s all
+			&:hover
+				color: var(--dgray)
+				&::after
+					transform: translateX(2px) rotate(-40deg)
+					border-color: var(--dgray)
+	&__page
+		display: grid
+		grid-row-page: 20px
+		
+	&__detail
+		&-img
+			height: 400px
+			margin-bottom: 30px
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover
+		&-title
+			font-family: 'Roboto', sans-serif
+			font-size: 34px
+			font-weight: bold
+			line-height: normal
+			color: var(--dgray)
+			margin-bottom: 30px
+		&-text
+			font-family: 'Roboto'
+			font-weight: 300
+			color: var(--dgray)
+			p
+				margin-bottom: 20px
+	&__comments
+		h2
+			font-family: 'Roboto', sans-serif
+			font-size: 36px
+			font-weight: 500
+			color: var(--dgray)
+.lastinfo
+	display: grid
+	grid-template-columns: 1fr 1fr
+	grid-gap: 30px
+	padding-top: 25px
+	border-top: 1px solid rgba(189, 194, 202, 0.3)
+	&__block
+		font-family: 'Roboto', sans-serif
+		color: var(--dgray)
+	&__title
+		margin-bottom: 10px
+		font-size: 20px
+	&__list
+		list-style: none
+		li
+			margin-bottom: 5px
+			a
+				color: var(--dgray)
+				text-decoration: underline
+				font-weight: 300
+	&__all
+		font-size: 18px
+		font-weight: bold
+		color: var(--green)
+		text-decoration: underline
+/* BLOG END */	
+
+
+/* SEARCH AJAX START*/
+.search
+	&__inner
+		padding-bottom: 50px
+
+#ajaxSearch_form
+	position: relative
+	fieldset
+		border: none
+	#searchClose
+		position: absolute
+		top: 2px
+		right: 2px
+	#indicator
+		position: absolute
+		bottom: 2px
+		right: 2px
+.AS_ajax_resultsInfos,
+	padding: 10px 0
+.AS_ajax_grpResultName,
+#ajaxSearch_intro
+	display: none
+.ajaxSearch_grpResultName
+	margin-bottom: 20px
+.AS_ajax_result,
+.ajaxSearch_result
+	background: rgba(200, 200, 200, 0.2)
+	margin-bottom: 10px
+	padding: 5px 10px
+	font-size: 14px
+.AS_ajax_resultLink,
+.ajaxSearch_resultLink,
+.AS_ajax_more a
+	color: var(--green)
+	font-weight: bold
+.paging1
+	margin: 10px 0
+.paging1 > a
+	color: var(--lgray)
+	border: 1px solid var(--lgray)
+	padding: 0 5px
+/* SEARCH AJAX END */

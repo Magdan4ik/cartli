@@ -1,0 +1,52 @@
+
+/* FOOTER START */
+.footer
+	background: var(--dgray) url('../img/footer-bg.png') no-repeat center
+	background-size: cover
+	&__inner
+		display: grid
+		grid-template-columns: max-content 1fr max-content
+		grid-column-gap: 50px
+		align-items: center
+		justify-content: space-between
+		padding: 30px 15px
+	&__logo
+		max-width: 150px
+		img
+			display: block
+	&__links
+		justify-self: center
+
+		a
+			color: #fff
+			font-family: "Roboto"
+			font-size: 15px
+			line-height: normal
+			margin-right: 70px
+			transition: 0.3s color
+			&:hover
+				color: var(--green)
+			&:last-child
+				margin-right: 0
+
+	&__social
+		justify-self: end
+		display: grid
+		grid-template-columns: 1fr 1fr
+		align-items: center
+		grid-gap: 20px
+		> a
+			width: 40px
+			height: 40px
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			border-radius: 50%
+			transition: 0.3s
+			&:hover
+				background-color: #fff
+				path
+					transition: 0.3s
+					fill: var(--green)
+/* FOOTER END */

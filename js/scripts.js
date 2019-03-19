@@ -1,9 +1,4 @@
-window.addEventListener('DOMContentLoaded', function() {
-
-
-	// Variability
-	// $("[data-id='style']").attr('href', '/assets/templates/cartli/css/main.css?' + Math.random());
-	// $("[data-id='script']").attr('src', '/assets/templates/cartli/js/scripts.js?' + Math.random());
+window.addEventListener('DOMContentLoaded', () => {
 
 	const            w = window,
 					 d = document,
@@ -21,24 +16,50 @@ window.addEventListener('DOMContentLoaded', function() {
 			Blog       = d.querySelector(".blog__main"),
 			header     = d.querySelector("header"),
 			briefcase  = d.querySelector(".briefcase");
-			
 
 
 	if (mDeviceMin) {
 		/*Toggle shrink of header */
-		(function() {
-			const shrinkHeader = () => setTimeout(() => {(w.pageYOffset > 80) ? header.dataset.shrink = true : header.dataset.shrink = false}, 150);
-			w.addEventListener("scroll", shrinkHeader);
-		}());
+		const shrinkHeader = () => setTimeout(() => {(w.pageYOffset > 80) ? header.dataset.shrink = true : header.dataset.shrink = false}, 150);
+		w.addEventListener("scroll", shrinkHeader);
 
 		/* Scroll site to top */
-		(function() {
-			const up = document.getElementById('up');
-			const toTop = () => setTimeout(() => {(w.pageYOffset > 500) ? up.dataset.visible = true : up.dataset.visible = false}, 150);
-			up.addEventListener('click', () => window.scrollTo({top: 0,	behavior: 'smooth'}));
-			w.addEventListener("scroll", toTop);
-		}());
+		const up = document.getElementById('up');
+		const toTop = () => setTimeout(() => {(w.pageYOffset > 500) ? up.dataset.visible = true : up.dataset.visible = false}, 150);
+		up.addEventListener('click', () => window.scrollTo({top: 0,	behavior: 'smooth'}));
+		w.addEventListener("scroll", toTop);
 	};
+
+	/* Service section start */
+	{
+		const li = d.querySelectorAll('.servblock__service li');
+		const sv = d.querySelectorAll('.servblock__infolist');
+		const bg = d.querySelector('.servblock__service-selected');
+		const st = d.querySelector('.servblock__service .selected');
+
+		li.forEach(el => {
+			el.addEventListener('click', e => {
+				e.preventDefault();
+				selectServ(el);
+				showServ(el);
+			})
+		});
+
+		function selectServ(el) {
+			bg.style.top    = el.offsetTop + "px";
+			bg.style.height = el.offsetHeight + "px";
+		}
+		function showServ(el) {
+			li.forEach(el => el.classList.remove('selected'));
+			sv.forEach(el => el.classList.remove('servblock__infolist--active'));
+			el.classList.add('selected');
+			d.querySelector('.servblock__infolist[data-serv='+ el.dataset.serv +']').classList.add('servblock__infolist--active');
+		}
+		selectServ(st);
+
+
+	}
+	/* Service section end*/
 
 
 
@@ -61,206 +82,129 @@ window.addEventListener('DOMContentLoaded', function() {
 
 
 
-
-	/* Bcases tabs START*/
-	if (Bcase) {
-
-		let $bnav  =  $('.bcase__nav');
-			$bnav.after('<div class="bcase__x-line"><div class="bcase__small-line"></div></div><div class="bcase__y-line"></div>');
-
-		let $button     =  $bnav.find('li'),
-			$lineX      =  $(Bcase).find(".bcase__x-line"),
-			$lineY      =  $(Bcase).find(".bcase__y-line"),
-			$lineS      =  $(Bcase).find('.bcase__small-line'),
-			$more       =  $(Bcase).find(".bcase__all"),
-			$bslider    =  $(Bcase).find('.bcase__content'),
-			$center     =  Math.round($lineY.position().left);
-
-			$button.on('click', function(e) {
-				e.preventDefault();
-				$(".bcase__nav li").removeClass('current');
-				$(this).addClass('current');
-				toggleCase();
-				drawline();
-			});
-
-			toggleCase();
-
-			function toggleCase() {
-				$(".bcase__item").removeClass('active');
-				$('.bcase__item[data-case=' + $(".bcase__nav li.current").attr('data-tab') + ']').addClass('active');
-			};
-
-			function drawline() {
-
-				var $current = $(".bcase__nav li.current"),
-					$left    = parseInt($current.position().left) + parseInt($current.outerWidth(true) / 2),
-					$bwidth  = $(".bcase").innerWidth(),
-					$bcaseH  = $(".bcase__content").innerHeight(),
-					$lineSH  = $bnav.height() - $current.position().top + parseInt($bnav.css("padding-top"));
-
-				if ($bwidth / 2 > $left) {
-					$lineX.css({
-						"width": $center - $left,
-						"left": $left,
-						"transform-origin": "center left"
-					});
-					$lineS.css({"left": "0", "right": "initial", "height": $lineSH});
-				} else {
-					$lineX.css({
-						"width": $left - $center,
-						"left": $left - ($left - $center),
-						"transform-origin": "center right"
-					});
-					$lineS.css({"right": "0", "left": "initial", "height": $lineSH});
+	let slickObj = {
+		clientDesc: {
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			arrows: false,
+			speed: 500,
+			fade: true,
+			swipe: false,
+			asNavFor: '.clients__slider-img',
+			responsive: [
+				{
+					breakpoint: 769,
+					settings: {
+						swipe: true,
+						speed: 500,
+						adaptiveHeight: true
+					}
 				}
-
-				$lineY.removeClass('animated').height($bcaseH);
-				$more.removeClass('done');
-				$lineX.addClass('animated');
-				$lineX.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-					$(this).removeClass('animated');
-					$lineY.addClass('animated');
-				});
-				$lineY.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-					$more.addClass('done');
-				});
-			};
-
-			drawline();
-
-
-
-			if (lDeviceMax) {
-				$bnav.slick({
-					slidesToShow: 1,
-					arrows: true,
-					responsive: [
-					{
-					  breakpoint: 1201,
-					  settings: {
-						slidesToShow: 4,
-					  }
+			]
+		},
+		clientImg: {
+			slidesToShow: 5,
+			arrows: true,
+			slidesToScroll: 1,
+			asNavFor: '.clients__slider-desc',
+			focusOnSelect: true,
+			centerMode: true,
+			centerPadding: 0,
+			responsive: [
+				{
+					breakpoint: 1200,
+					settings: {
+						slidesToShow: 4
 					},
-					{
-					  breakpoint: 993,
-					  settings: {
-						slidesToShow: 3
-					  }
+					breakpoint: 992,
+					settings: {
+						slidesToShow: 2
 					},
-					{
-					  breakpoint: 769,
-					  settings: {
+					breakpoint: 768,
+					settings: {
 						slidesToShow: 1,
-					  }
+						dots: false
 					}
-				  ]
-				}).on('afterChange ', function() {
-					$(this).find('.slick-current').click();
-					if (sDeviceMax) {
-						$bslider.slick('refresh');
-					}
-				});
-			};
-
-			if (sDeviceMax) {
-
-				$bslider.slick({
-					infinite: false,
-					focusOnSelect: true,
-					centerMode: true,
-					centerPadding: '0px',
-					speed: 300,
-					dots: true,
-					arrows: false,
-					autoplay: false,
-					slide: '.bcase__item.active'
-				});
-
-				$button.on('click', function() {
-					$bslider.slick('refresh');
-				});
-			};
-
-	};
-	/* Bcases tabs END*/
-
-
-	if(briefcase) {
-		(function(){
-
-			const btn    = briefcase.querySelectorAll('.briefcase__navitem');
-			const slider = briefcase.querySelector('.briefcase__content');
-			const slides = briefcase.querySelectorAll('.briefcase__article');
-
-			$(slider)
-			.on('init', function(event, slick, currentSlide) {
-				let cur = $(slick.$slides[slick.currentSlide]);
-				let next = cur.next();
-				let prev = cur.prev();
-					prev.addClass('slick-sprev');
-					next.addClass('slick-snext');
-					cur.removeClass('slick-snext').removeClass('slick-sprev');
-					slick.$prev = prev;
-					slick.$next = next;
-			})
-			.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
-			let cur = $(slick.$slides[nextSlide]);
-				slick.$prev.removeClass('slick-sprev');
-					slick.$next.removeClass('slick-snext');
-				next = cur.next(),
-				prev = cur.prev();
-					prev.addClass('slick-sprev');
-					next.addClass('slick-snext');
-					slick.$prev = prev;
-					slick.$next = next;
-					cur.removeClass('slick-next').removeClass('slick-sprev');
-			});
-			$(slider).slick({
-				speed: 1000,
-				arrows: true,
-				dots: false,
-				focusOnSelect: true,
-				prevArrow: '<button class="slick-arrow--prev"> prev</button>',
-				nextArrow: '<button class="slick-arrow--next"> next</button>',
-				infinite: true,
-				centerMode: true,
-				slidesToShow: 1,
-				slidesToScroll: 1,
-				centerPadding: '0',
-				swipe: true,
-				slide: '.briefcase__article--active'
-			});
-
-			btn.forEach(el => {
-				el.addEventListener('click', e => {
-					e.preventDefault();
-					console.log(el);
-					btn.forEach(ell => ell.classList.remove('briefcase__navitem--active'));
-					el.classList.add('briefcase__navitem--active');
-					newBriefcases(el);
-				});
-			});
-
-			function newBriefcases(el) {
-				if(!el) el = briefcase.querySelector('.briefcase__navitem--active');
-				briefcase.querySelectorAll('.briefcase__article').forEach(el => el.classList.remove('briefcase__article--active'));
-				if (el.dataset.case == 'case-all') {
-					$('.briefcase__article').removeClass('slick-sprev slick-snext');
-					slides.forEach(el => el.classList.add('briefcase__article--active'));
-					$(slider).slick('refresh');
-				} else {
-					let thisSlider = briefcase.querySelectorAll('.briefcase__article[data-case='+ el.dataset.case +']');
-					thisSlider.forEach(el => el.classList.add('briefcase__article--active'));
-					$(slider).slick('refresh');
 				}
+			]
+		}
+	};
+	$('.clients__slider-desc').slick(slickObj.clientDesc);
+	$('.clients__slider-img').slick(slickObj.clientImg);
 
-			};
-			newBriefcases();
 
 
-		}());
 
+	/* Bcases START*/
+	if(briefcase) {
+		const btn    = briefcase.querySelectorAll('.briefcase__navitem');
+		const slider = briefcase.querySelector('.briefcase__content');
+		const slides = briefcase.querySelectorAll('.briefcase__article');
+
+		$(slider)
+		.on('init', function(event, slick, currentSlide) {
+			let cur = $(slick.$slides[slick.currentSlide]);
+			let next = cur.next();
+			let prev = cur.prev();
+				prev.addClass('slick-sprev');
+				next.addClass('slick-snext');
+				cur.removeClass('slick-snext').removeClass('slick-sprev');
+				slick.$prev = prev;
+				slick.$next = next;
+		})
+		.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+		let cur = $(slick.$slides[nextSlide]);
+			slick.$prev.removeClass('slick-sprev');
+				slick.$next.removeClass('slick-snext');
+			next = cur.next(),
+			prev = cur.prev();
+				prev.addClass('slick-sprev');
+				next.addClass('slick-snext');
+				slick.$prev = prev;
+				slick.$next = next;
+				cur.removeClass('slick-next').removeClass('slick-sprev');
+		});
+		$(slider).slick({
+			speed: 1000,
+			arrows: true,
+			dots: false,
+			focusOnSelect: true,
+			prevArrow: '<button class="slick-arrow--prev"> prev</button>',
+			nextArrow: '<button class="slick-arrow--next"> next</button>',
+			infinite: true,
+			centerMode: true,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			centerPadding: '0',
+			swipe: true,
+			slide: '.briefcase__article--active'
+		});
+
+		btn.forEach(el => {
+			el.addEventListener('click', e => {
+				e.preventDefault();
+				console.log(el);
+				btn.forEach(ell => ell.classList.remove('briefcase__navitem--active'));
+				el.classList.add('briefcase__navitem--active');
+				newBriefcases(el);
+			});
+		});
+
+		function newBriefcases(el) {
+			if(!el) el = briefcase.querySelector('.briefcase__navitem--active');
+			briefcase.querySelectorAll('.briefcase__article').forEach(el => el.classList.remove('briefcase__article--active'));
+			if (el.dataset.case == 'case-all') {
+				$('.briefcase__article').removeClass('slick-sprev slick-snext');
+				slides.forEach(el => el.classList.add('briefcase__article--active'));
+				$(slider).slick('refresh');
+			} else {
+				let thisSlider = briefcase.querySelectorAll('.briefcase__article[data-case='+ el.dataset.case +']');
+				thisSlider.forEach(el => el.classList.add('briefcase__article--active'));
+				$(slider).slick('refresh');
+			}
+
+		};
+		newBriefcases();
 	};
 
 

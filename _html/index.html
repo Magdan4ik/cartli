@@ -1,89 +1,191 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-	<meta charset="utf-8">
-	<title>Title</title>
-	<meta name="description" content="Cartli - аутсорсинговый колл-центр для обработки входящих заявок">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<meta name="theme-color" content="#000">
-	<meta name="msapplication-navbutton-color" content="#000">
-	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
-	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700|Roboto:300,400,500,700&amp;subset=cyrillic">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"/>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"/>
-	<link rel="stylesheet" href="css/main.css">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js" defer></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js" defer></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js" defer></script>
-	<script src="js/scripts.js" defer></script>
-</head>
-
-<body>
-	<header class="header">
-		<div class="header__inner container">
-			<div class="header__top">
-				<p class="header__dep">Связаться с отделом продаж:</p>
-				<a class="header__info header__info--tel" href="tel: +380445864155">+38 (044) 586-41-55</a>
-				<a class="header__info header__info--mail" href="mailto: info@cartli.ua">info@cartli.ua</a>
-			</div>
-			<div class="header__middle">
-				<a class="header__logo" href="/" >Cartli</a>
-				<nav class="header__nav">
-					<ul class="header__navlist">
-						<li class="current"><a href="/"><span>Главная</span></a></li>
-						<li><a href="#o-nas"><span>О нас</span></a></li>
-						<li><a href="#kejsy"><span>Кейсы</span></a></li>
-						<li><a href="#uslugi"><span>Услуги</span></a></li>
-						<li><a href="#articles"><span>Публикации</span></a></li>
-						<li><a href="#news"><span>Новости</span></a></li>
-						<li><a href="#vakansii"><span>Вакансии</span></a></li>
-						<li><a href="#kontakty"><span>Контакты</span></a></li>
-					</ul>
-				</nav>
-				<button type="button" class="header__call open-modal" data-modal="#modalCall">Перезвоните мне</button>
-				<button type="button" class="header__burger"><div class="header__burger-in"></div></button>
-			</div>
-		</div>
-	</header>
-
-
-
+	@@include('./chunks/head.html', {"title": "Главная"})
+	<body>
+		@@include('./chunks/header.html')
 	<main class="main container">
 
 		<section class="heading">
 			<div class="heading__txt">
 				<h1 class="heading__title">
-					<b>Аутсорсинговый</b>
-					<b>КОЛЛ-ЦЕНТР Cartli</b>
+					<strong>Аутсорсинговый</strong>
+					<strong>КОЛЛ-ЦЕНТР <b>Cartli</b></strong>
 				</h1>
-				<p>Лучшее решение для вашего бизнеса</p>
+				<p class="heading__subtitle">Лучшее решение для вашего бизнеса</p>
 			</div>
 		</section>
 
-
-
-		<section class="about">
-			<div class="about__grid">
-				<figure class="about__operator">
-					<img class="about__operator-1" src="img/cc-operator.png"  alt="Call-Center Operator">
-					<img class="about__operator-2" src="img/circle-1.svg" alt="Circle">
-					<img class="about__operator-3" src="img/circle-2.svg" alt="Circle">
-					<img class="about__operator-4" src="img/circle-3.svg" alt="Circle">
-				</figure>
-				<div class="about__text">
-					<h2 class="dot">О НАС</h2>
-					<h4 class="about__descr">Cartli – многопрофильный аутсорсинговый call-центр</h4>
+		<section class="inform">
+			<section class="service">
+				<div class="title" data-title="Услуги"><b>Услуги</b></div>
+				<div class="service__subtitle">
+					<p class="service__subtitle-upp">ВЫБЕРИТЕ ИНТЕРЕСУЮЩУЮ ВАС УСЛУГУ</p>
+					<p>для сотрудников, руководителей и клиентов</p>
+				</div>
+				<nav class="servblock">
+					<div class="servblock__services">
+						<ul class="servblock__service">
+							<li class="selected" data-serv="serv1">
+								<p class="servblock__name">Входящие сервисы</p>
+								<p class="servblock__desc">Контакт-центр Cartli позволит вам передать в аутсорсинг входящие информационные потоки</p>
+							</li>
+							<li data-serv="serv2">
+								<p class="servblock__name">Исходящие сервисы</p>
+								<p class="servblock__desc">Выходите на связь с клиентами или организовывайте продажи по телефону</p>
+							</li>
+							<li data-serv="serv3">
+								<p class="servblock__name">Дополнительные услуг</p>
+								<p class="servblock__desc">Сервис Cartli позволяет создать систему консультирования посетителей ваших сайтов в режиме 24\7 на русском и английском языках</p>
+							</li>
+						</ul>
+						<div class="servblock__service-selected"></div>
+					</div>
+					<div class="servblock__info">
+						<ul class="servblock__infolist servblock__infolist--active" data-serv="serv1">
+							<li><a href="/uslugi/inside-service/goryachaya-liniya">Горячая линия</a> </li>
+							<li><a href="/uslugi/inside-service/obrabotka-zvonkov-i-zayavok">Обработка звонков и заявок</a> </li>
+							<li><a href="/uslugi/inside-service/organizaciya-spravochnoj-sluzhby">Организация справочной службы</a> </li>
+							<li><a href="/uslugi/inside-service/virtualnyj-ofis">Виртуальный офис</a> </li>
+							<li><a href="/uslugi/inside-service/autsorsing-personala">Аутсорсинг персонала</a> </li>
+							<li><a href="/uslugi/inside-service/autsorsing-priema-zvonkov">Аутсорсинг приема звонков</a> </li>
+						</ul>
+						<ul class="servblock__infolist" data-serv="serv2">
+							<li><a href="/uslugi/ishodyashhie-servisy/telefonnye-oprosy">Телефонные опросы</a> </li>
+							<li><a href="/uslugi/ishodyashhie-servisy/prezentaciya-po-telefonu">Презентация по телефону</a> </li>
+							<li><a href="/uslugi/ishodyashhie-servisy/avtomaticheskij-obzvon">Автоматический обзвон</a> </li>
+							<li><a href="/uslugi/ishodyashhie-servisy/cozdanie-i-aktualizaciya-baz-dannyh">Cоздание и актуализация баз данных</a></li>
+						</ul>
+						<ul class="servblock__infolist" data-serv="serv3">
+							<li><a href="/uslugi/dopolnitelnye-uslugi/virtualnaya-ip-ats">Виртуальная IP АТС</a> </li>
+							<li><a href="/uslugi/dopolnitelnye-uslugi/golosovoe-menyu-ivr">Голосовое меню IVR</a> </li>
+							<li><a href="/uslugi/dopolnitelnye-uslugi/rassylka-golosovyh-soobshhenij">Рассылка голосовых сообщений</a> </li>
+						</ul>
+					</div>
+				</nav>
+			</section>
+			<section class="about">
+				<div class="title" data-title="О нас"><b>О нас</b></div>
+				<h3 class="about__subtitle">Cartli – многопрофильный аутсорсинговый контакт-центр</h3>
+				<div class="about__desc">
 					<p>Услуги колл-центра Cartli строятся на прозрачной работе с клиентами, что позволяет на протяжении 11 лет оказывать качественный сервис и использовать индивидуальный подход в работе не зависимо от масштабности и запросов заказчиков. Качественная обработка звонков и заявок поможет не только расширить базу клиентов, но и существенно сэкономит Ваш бюджет на подборе персонала и его обучении.</p>
 					<p><strong>Многопрофильный аутсорсинговый контакт-центр Cartli</strong> специализируется на предоставлении входящих и исходящих сервисов, а также предлагает внедрение комплексных решений для каждой сферы бизнеса. Владение тонкими техническими нюансами и опытное использование последних технологических разработок позволяют гарантировать высокое качество услуг для оптимизации бизнес-процессов заказчика.</p>
-					<p><strong>Партнерство с колл-центром Cartli</strong> - это эффективный инструмент для удержания старых и привлечения новых клиентов</p>
-					<a href="#about" class="btn btn--white-g about__more">Подробнее</a>
+					<p>Режим 24/7/365 позволит обеспечить стабильное и круглосуточное обслуживание с привязкой к часовому поясу Ваших клиентов.</p>
+					<button type="button" class="btn btn--green about__more">Подробнее</button>
 				</div>
-			</div>
+			</section>
 		</section>
 
+        <!-- GOVNOCODE START -->
+		<section class="clients">
+			<h2 class="clients__title">Наши клиенты</h2>
+			<div class="clients__sliders">
+				<ul class="clients__slider-desc">
+					<li>
+						<b>«Tv Rus Tv»</b> - компания которая предоставляет услуги интернет-телевидения. Для данной компании мы реализовали техническое
+						решение, для обработки большого потока входящих звонков. Также было найдено решение для организации технической
+						поддержки абонентов компании ТV Rus Tv. Ведется прием заявок и решение проблем нашими техническими специалистами. Сервис
+						работает круглосуточно.
+					</li>
+					<li>
+						<b>«Tv Rus Tv»</b> - компания которая предоставляет услуги интернет-телевидения. Для данной компании мы реализовали техническое
+						решение, для обработки большого потока входящих звонков. Также было найдено решение для организации технической
+						поддержки абонентов компании ТV Rus Tv. Ведется прием заявок и решение проблем нашими техническими специалистами. Сервис
+						работает круглосуточно.
+					</li>
+					<li>
+						<b>«Tv Rus Tv»</b> - компания которая предоставляет услуги интернет-телевидения. Для данной компании мы реализовали техническое
+						решение, для обработки большого потока входящих звонков. Также было найдено решение для организации технической
+						поддержки абонентов компании ТV Rus Tv. Ведется прием заявок и решение проблем нашими техническими специалистами. Сервис
+						работает круглосуточно.
+					</li>
+					<li>
+						<b>«Tv Rus Tv»</b> - компания которая предоставляет услуги интернет-телевидения. Для данной компании мы реализовали техническое
+						решение, для обработки большого потока входящих звонков. Также было найдено решение для организации технической
+						поддержки абонентов компании ТV Rus Tv. Ведется прием заявок и решение проблем нашими техническими специалистами. Сервис
+						работает круглосуточно.
+					</li>
+					<li>
+						<b>«Tv Rus Tv»</b> - компания которая предоставляет услуги интернет-телевидения. Для данной компании мы реализовали техническое
+						решение, для обработки большого потока входящих звонков. Также было найдено решение для организации технической
+						поддержки абонентов компании ТV Rus Tv. Ведется прием заявок и решение проблем нашими техническими специалистами. Сервис
+						работает круглосуточно.
+					</li>
+					<li>
+						<b>«Tv Rus Tv»</b> - компания которая предоставляет услуги интернет-телевидения. Для данной компании мы реализовали техническое
+						решение, для обработки большого потока входящих звонков. Также было найдено решение для организации технической
+						поддержки абонентов компании ТV Rus Tv. Ведется прием заявок и решение проблем нашими техническими специалистами. Сервис
+						работает круглосуточно.
+					</li>
+				</ul>
+				<ul class="clients__slider-img">
+					<li><figure><img src="img/clients/1.png"></figure></li>
+					<li><figure><img src="img/clients/2.png"></figure></li>
+					<li><figure><img src="img/clients/3.png"></figure></li>
+					<li><figure><img src="img/clients/4.png"></figure></li>
+					<li><figure><img src="img/clients/5.png"></figure></li>
+					<li><figure><img src="img/clients/6.png"></figure></li>
+					<li><figure><img src="img/clients/7.png"></figure></li>
+					<li><figure><img src="img/clients/8.png"></figure></li>
+					<li><figure><img src="img/clients/9.png"></figure></li>
+					<li><figure><img src="img/clients/10.png"></figure></li>
+					<li><figure><img src="img/clients/11.png"></figure></li>
+					<li><figure><img src="img/clients/12.png"></figure></li>
+					<li><figure><img src="img/clients/13.png"></figure></li>
+					<li><figure><img src="img/clients/14.png"></figure></li>
+					<li><figure><img src="img/clients/15.png"></figure></li>
+					<li><figure><img src="img/clients/16.png"></figure></li>
+					<li><figure><img src="img/clients/17.png"></figure></li>
+					<li><figure><img src="img/clients/18.png"></figure></li>
+					<li><figure><img src="img/clients/19.png"></figure></li>
+					<li><figure><img src="img/clients/20.png"></figure></li>
+					<li><figure><img src="img/clients/21.png"></figure></li>
+					<li><figure><img src="img/clients/22.png"></figure></li>
+					<li><figure><img src="img/clients/23.png"></figure></li>
+					<li><figure><img src="img/clients/24.png"></figure></li>
+					<li><figure><img src="img/clients/25.png"></figure></li>
+					<li><figure><img src="img/clients/26.png"></figure></li>
+					<li><figure><img src="img/clients/27.png"></figure></li>
+					<li><figure><img src="img/clients/28.png"></figure></li>
+					<li><figure><img src="img/clients/29.png"></figure></li>
+					<li><figure><img src="img/clients/30.png"></figure></li>
+					<li><figure><img src="img/clients/31.png"></figure></li>
+					<li><figure><img src="img/clients/32.png"></figure></li>
+					<li><figure><img src="img/clients/33.png"></figure></li>
+					<li><figure><img src="img/clients/34.png"></figure></li>
+					<li><figure><img src="img/clients/35.png"></figure></li>
+					<li><figure><img src="img/clients/36.png"></figure></li>
+					<li><figure><img src="img/clients/37.png"></figure></li>
+					<li><figure><img src="img/clients/38.png"></figure></li>
+					<li><figure><img src="img/clients/39.png"></figure></li>
+					<li><figure><img src="img/clients/40.png"></figure></li>
+					<li><figure><img src="img/clients/41.png"></figure></li>
+					<li><figure><img src="img/clients/42.png"></figure></li>
+					<li><figure><img src="img/clients/43.png"></figure></li>
+					<li><figure><img src="img/clients/44.png"></figure></li>
+					<li><figure><img src="img/clients/45.png"></figure></li>
+					<li><figure><img src="img/clients/46.png"></figure></li>
+					<li><figure><img src="img/clients/47.png"></figure></li>
+					<li><figure><img src="img/clients/48.png"></figure></li>
+					<li><figure><img src="img/clients/49.png"></figure></li>
+					<li><figure><img src="img/clients/50.png"></figure></li>
+					<li><figure><img src="img/clients/51.png"></figure></li>
+					<li><figure><img src="img/clients/52.png"></figure></li>
+					<li><figure><img src="img/clients/53.png"></figure></li>
+					<li><figure><img src="img/clients/54.png"></figure></li>
+					<li><figure><img src="img/clients/55.png"></figure></li>
+					<li><figure><img src="img/clients/56.png"></figure></li>
+					<li><figure><img src="img/clients/57.png"></figure></li>
+					<li><figure><img src="img/clients/58.png"></figure></li>
+					<li><figure><img src="img/clients/59.png"></figure></li>
+					<li><figure><img src="img/clients/50.png"></figure></li>
+					<li><figure><img src="img/clients/60.png"></figure></li>
+					<li><figure><img src="img/clients/61.png"></figure></li>
+				</ul>
+			</div>
 
+		</section>
+
+<!-- GOVNOCODE END -->
 
 		<section class="bcase" style="display: none">
 			<div class="bcase__container">
@@ -293,64 +395,6 @@
 			</div>
 		</service>
 	</main>
-
-
-
-	<footer class="footer">
-		<div class="footer__inner container">
-			<div class="footer__logo">
-				<a href="/"><img src="/img/logo.png" alt="Cartli"></a>
-			</div>
-			<div class="footer__links">
-				<a href="/">Главная</a>
-				<a href="#">Про компанию</a>
-				<a href="#">Кейсы</a>
-				<a href="#">Блог</a>
-				<a href="#">Вакансии</a>
-				<a href="#">Контакты</a>
-			</div>
-			<div class="footer__social">
-				<a href="#" class="footer__social-facebook" title="Facebook">
-					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 155.139 155.139" xml:space="preserve" width="17" height="17">
-						<g>
-							<path d="M89.584,155.139V84.378h23.742l3.562-27.585H89.584V39.184   c0-7.984,2.208-13.425,13.67-13.425l14.595-0.006V1.08C115.325,0.752,106.661,0,96.577,0C75.52,0,61.104,12.853,61.104,36.452   v20.341H37.29v27.585h23.814v70.761H89.584z" fill="#fff"></path>
-						</g>
-					</svg>
-				</a>
-				<a href="#" class="footer__social-twitter" title="Twitter">
-					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 612 612" xml:space="preserve" width="17" height="17">
-						<g>
-							<path d="M612,116.258c-22.525,9.981-46.694,16.75-72.088,19.772c25.929-15.527,45.777-40.155,55.184-69.411    c-24.322,14.379-51.169,24.82-79.775,30.48c-22.907-24.437-55.49-39.658-91.63-39.658c-69.334,0-125.551,56.217-125.551,125.513    c0,9.828,1.109,19.427,3.251,28.606C197.065,206.32,104.556,156.337,42.641,80.386c-10.823,18.51-16.98,40.078-16.98,63.101    c0,43.559,22.181,81.993,55.835,104.479c-20.575-0.688-39.926-6.348-56.867-15.756v1.568c0,60.806,43.291,111.554,100.693,123.104    c-10.517,2.83-21.607,4.398-33.08,4.398c-8.107,0-15.947-0.803-23.634-2.333c15.985,49.907,62.336,86.199,117.253,87.194    c-42.947,33.654-97.099,53.655-155.916,53.655c-10.134,0-20.116-0.612-29.944-1.721c55.567,35.681,121.536,56.485,192.438,56.485    c230.948,0,357.188-191.291,357.188-357.188l-0.421-16.253C573.872,163.526,595.211,141.422,612,116.258z" fill="#fff"></path>
-						</g>
-					</svg>
-				</a>
-			</div>
-		</div>
-	</footer>
-
-
-	<button type="button" id="up">To Top</button>
-	
-
-	<!-- 	/* POPUP START */ -->
-	<div id="modalCall" class="modal-box">
-		<div class="modal-box__content">
-			<div class="modal-box__close"></div>
-			<h3>Мы вам перезвоним</h2>
-			<form method="" action="#">
-				<input name="name" type="text" placeholder="Имя">
-				<input name="phone" type="tel" placeholder="Телефон">
-				<button type="submit" class="btn btn--green">Отправить</button>
-			</form>
-		</div>
-	</div>
-
-	<div id="modalOk" class="modal-box">
-		<div class="modal-box__content">
-			<div class="modal-box__close"></div>
-			<h4>Спасибо! Мы свяжемся с вами в ближайшее время</h4>
-		</div>
-	</div>
-	<!-- /* POPUP END */ -->
+    @@include('./chunks/footer.html')
 </body>
 </html>
