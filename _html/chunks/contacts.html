@@ -1,0 +1,37 @@
+<section class="contacts">
+    <div class="contacts__inner">
+        <div class="title contacts__title" data-title="Обратная связь"><b>Обратная связь</b></div>
+        <form action="/assets/templates/cartli/ajax/main_page_contact.php" method="post" class="contacts__form" id="contact-form">
+			<input name="name" type="text" placeholder="Имя*" aria-label="Имя" data-r="required">
+			<input name="company" type="text" placeholder="Компания" aria-label="Компания">
+			<input name="tel" type="tel" placeholder="Телефон*" aria-label="Телефон" data-r="required">
+			<select name="service">
+				<optgroup label="Входящие сервисы">
+                    <option>Горячая линия</option>
+                    <option>Обработка звонков и заявок</option>
+                    <option>Организация справочной службы</option>
+                    <option>Виртуальный офис</option>
+                    <option>Аутсорсинг персонала</option>
+                    <option>Аутсорсинг приема звонков</option>
+				</optgroup>
+				<optgroup label="Исходящие сервисы">
+                     <option>Телефонные опросы</option>
+                     <option>Презентация по телефону</option>
+                     <option>Автоматический обзвон</option>
+                     <option>Cоздание и актуализация баз данных</option>
+				</optgroup>	
+				<optgroup label="Дополнительные услуги">
+                     <option>Виртуальная IP АТС</option>
+                     <option>Голосовое меню IVR</option>
+                     <option>Рассылка голосовых сообщений</option>
+				</optgroup>
+			</select>
+			<textarea placeholder="Сообщение" name="text" aria-label="Сообщение"></textarea>
+			<input name="email" type="email" placeholder="E-mail*" aria-label="E-mail" data-r="required">
+			<div class="contacts__confirm">
+				<div class="g-recaptcha" data-sitekey="6LdPNXkUAAAAALlgFT-43nyUWynWIOWuYGRZG_SZ" data-size="compact"><div style="width: 164px; height: 144px;"><div><iframe src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LdPNXkUAAAAALlgFT-43nyUWynWIOWuYGRZG_SZ&amp;co=aHR0cHM6Ly9jYXJ0bGkudWE6NDQz&amp;hl=ru&amp;v=v1552285980763&amp;size=compact&amp;cb=8604kepn0ge4" width="164" height="144" role="presentation" name="a-kicw3jhlhd3g" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div></div>
+				<button type="submit" class="btn btn--white">Отправить</button>
+			</div>
+		</form>
+    </div>
+</section>

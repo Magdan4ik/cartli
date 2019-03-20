@@ -1,0 +1,33 @@
+/* PAGINATION START */
+.pagination
+	display: flex
+	justify-content: center
+	align-items: center
+	padding: 20px 0
+	list-style-type: none
+	li
+		margin: 10px
+		border-radius: 6px
+		border: 1px solid rgba(150, 150, 150, 0.5)
+		transition: 0.2s
+		&:hover,
+		&.current
+			background-color: var(--green)
+			border-color: var(--green)
+			a
+				color: #fff
+		&.current
+			a
+				cursor: default
+		a
+			width: 35px
+			height: 35px
+			display: inline-flex
+			justify-content: center
+			align-items: center
+			color: rgba(62, 62, 62, 0.5)
+			font-size: 18px
+			font-weight: bold
+			font-family: "Roboto", sans-serif
+			line-height: 1
+/* PAGINATION END */

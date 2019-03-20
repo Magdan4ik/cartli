@@ -1,0 +1,59 @@
+
+/* SECTION CONTACTS START */
+.contacts
+	height: 500px
+	&__inner
+		padding-top: 60px
+	&::before
+		content: ""
+		position: absolute
+		left: 0
+		right: 0
+		width: 100%
+		height: inherit
+		background-image: url('../img/new__cartli/contacts-bg.png'), linear-gradient(to right, #6bc28c, #3cc0ac)
+		background-size: cover
+		background-position: right top
+		z-index: -1
+	&__title
+		color: #fff
+		&::before
+			opacity: 0.4
+		b
+			&::after
+				border-color: #fff
+	&__form
+		display: grid
+		grid-template-columns: 1fr 1fr
+		grid-gap: 30px
+		grid-auto-rows: 50px
+		margin: 0 auto
+		margin-bottom: 30px
+		max-width: 1000px
+
+		input,
+		textarea
+			background: transparent
+			color: #fff
+			border-color: rgba(255, 255, 255, 0.3)
+			&:focus
+				border-color: rgba(255, 255, 255, 0.6)
+			&::placeholder
+				color: #fff
+				opacity: 1
+
+		textarea
+			grid-row: span 2
+			max-height: 200px
+
+		button
+			grid-column: 3
+			grid-row: 3
+			justify-self: end
+	&__confirm
+		display: flex
+		justify-content: space-between
+		.g-recaptcha
+			mix-blend-mode: multiply
+			overflow: hidden
+/* SECTION CONTACTS END */

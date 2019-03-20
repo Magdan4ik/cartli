@@ -10,6 +10,7 @@ window.addEventListener('DOMContentLoaded', () => {
 			sDeviceMax = w.innerWidth <= 768;
 
 	const   Bcase      = d.querySelector(".bcase"),
+			service    = d.querySelector('.service'),
 			Service    = d.querySelector(".service__page"),
 			About      = d.querySelector(".company"),
 			Vslider    = d.querySelector(".vacancy-c__slider"),
@@ -30,8 +31,7 @@ window.addEventListener('DOMContentLoaded', () => {
 		w.addEventListener("scroll", toTop);
 	};
 
-	/* Service section start */
-	{
+	if(service) {
 		const li = d.querySelectorAll('.servblock__service li');
 		const sv = d.querySelectorAll('.servblock__infolist');
 		const bg = d.querySelector('.servblock__service-selected');
@@ -42,7 +42,7 @@ window.addEventListener('DOMContentLoaded', () => {
 				e.preventDefault();
 				selectServ(el);
 				showServ(el);
-			})
+			});
 		});
 
 		function selectServ(el) {
@@ -56,11 +56,7 @@ window.addEventListener('DOMContentLoaded', () => {
 			d.querySelector('.servblock__infolist[data-serv='+ el.dataset.serv +']').classList.add('servblock__infolist--active');
 		}
 		selectServ(st);
-
-
 	}
-	/* Service section end*/
-
 
 
 	/* Burger Menu*/

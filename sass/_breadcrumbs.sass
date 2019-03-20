@@ -1,0 +1,48 @@
+/* BREADCRUMBS START */
+.breadcrumbs
+	margin-bottom: 50px
+	&__inner
+		min-height: 150px
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding: 15px
+		color: #fff
+	&__title
+		flex-basis: 45%
+		font-family: "Roboto", sans-serif
+		font-size: 30px
+		font-weight: 300
+		line-height: 1
+	ul
+		flex-basis: 50%
+		list-style: none
+		font-family: "Roboto", sans-serif
+		font-size: 18px
+		line-height: 1.2
+		text-align: right
+		li
+			display: inline
+			&::after
+				content: ""
+				border: solid #fff
+				border-width: 0 2px 2px 0
+				display: inline-block
+				vertical-align: middle
+				margin: 0 15px 0 10px
+				padding: 3px
+				transform: rotate(-45deg)
+			&::last-child
+				padding-right: 0
+				&::after
+					display: none
+			span
+				cursor: default
+				font-size: 16px
+			a
+				color: #fff
+				font-size: 16px
+				font-weight: 300
+				&:hover
+					border-bottom: 1px solid #fff
+/* BREADCRUMBS END */

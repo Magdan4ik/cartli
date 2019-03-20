@@ -1,0 +1,52 @@
+/* SECTION CLIENTS START */
+.clients
+	padding-top: 45px
+	&__title
+		text-align: center
+		padding-bottom: 30px
+	&__sliders
+		background: #f7f7fb
+		position: relative
+		padding: 30px 0
+	&__slider-desc
+		font-size: 15px
+		font-weight: 300
+		font-style: italic
+		line-height: 1.5
+		text-align: center
+		color: #3a3a3a
+		margin: 0 44px 25px 44px
+		li
+			b
+				font-style: normal
+				color: green
+
+	&__slider-img
+		display: flex
+		align-items: center
+		li
+			figure
+				img
+					margin: 0 auto
+		.slick-list
+			margin: 0 50px
+		.slick-slide
+			filter: grayscale(1)  opacity(0.2)
+			transform: scale(0.8)
+			transition: 0.5s all
+		.slick-current
+			filter: grayscale(0)  opacity(1)
+			transform: scale(1)
+		.slick-arrow
+			background: url('../img/slider--arrow.svg') no-repeat center/13px
+			height: 100%
+			width: 50px
+			z-index: 2
+			&::before
+				display: none
+		.slick-prev
+			left: 0
+		.slick-next
+			right: 0
+			transform: translate(0,-50%) scale(-1)
+/* SECTION CLIENTS END */

@@ -19,9 +19,27 @@
 \:focus
 	outline: none
 
+\::-moz-selection
+  background: var(--green)
+  color: #fff
+
 \::selection
-	background: rgba(0,160,0,0.5)
-	color: #fff
+  background: var(--green)
+  color: #fff
+
+\::-webkit-scrollbar
+  background-color: #fff
+  width: 6px
+  height: 6px
+
+\::-webkit-scrollbar-thumb
+  background: linear-gradient(to right, #6ac28e, #3ec0ab 50%, #30dd8a, #2bb673) 
+  border-radius: 3px
+
+\::placeholder
+	opacity: 1
+	color: #000
+	transition: 0.4s transform, 0.4s opacity
 
 html, body
 	height: 100%
@@ -53,22 +71,98 @@ textarea,
 select
 	width: 100%
 	padding: 15px 20px
-	font-size: 14px
-	font-family: "Open Sans", sans-serif
+	font-size: 15px
+	font-family: 'Roboto', sans-serif
 	font-weight: 300
 	line-height: normal
-	color: #6e6e6e
-	border: solid 1px #e0e0e0
-	border-radius: 5px
+	color: #000
+	border: solid 1px #D58481
+	border-radius: 10px
 	transition: 0.3s border
 	&.success
-		border-color: var(--green)
+		border-color: green
 	&.error
 		border-color: red
+	&:focus::placeholder
+		transform: translateX(9px)
+		opacity: 0 !important
+
 textarea
 	resize: vertical
-	min-height: 130px
-	height: 130px
+	min-height: 80px
+	height: 120px
+	max-height: 200px
+	&::placeholder
+		opacity: 0.5
+
+input[type='radio'],
+input[type='checkbox'],
+select
+	-webkit-appearance: none
+	-moz-appearance: none
+	appearance: none
+	border-radius: 0
+	cursor: pointer
+
+select
+	background: url('../img/arrow-down.svg') no-repeat right 10px center/15px
+	padding-right: 30px
+	&:focus
+		background-image: url('../img/arrow-up.svg')
+
+input
+	&[type='checkbox'],
+	&[type='radio']
+		background: #fff
+		position: relative
+		width: 16px
+		height: 16px
+		border: none
+		padding: 0
+		cursor: pointer
+		width: 18px
+		height: 18px
+		border: 2px solid #d58481
+		transition: 0.2s
+	&[type='checkbox']
+		border-radius: 2px
+		&::before
+			content: ""
+			position: absolute
+			top: 0
+			left: 4px
+			width: 6px
+			height: 12px
+			border: 2px solid #fff
+			border-top-width: 0
+			border-left-width: 0
+			transform: rotate(45deg) scale(0)
+			transition: 0.2s
+		&:checked
+			background-color: #d58481
+			border-color: #d58481
+			&::before
+				transform: rotate(45deg) scale(1)
+
+	&[type='radio']
+		border-radius: 50%
+		&::before
+			content: ""
+			background-color: var(--primary-color)
+			position: absolute
+			top: 3px
+			left: 3px
+			border: none
+			width: 8px
+			height: 8px
+			border-radius: inherit
+			transform: scale(0)
+			transition: 0.2s
+			&:checked
+				border-color: var(--primary-color)
+				background-color: #fff
+				&::before
+					transform: scale(1)
 
 h2
 	font-family: 'Roboto', sans-serif
@@ -124,7 +218,7 @@ h2
 		left: 0
 		right: 0
 		font-size: 72px
-		line-height: 0.7
+		line-height: 0.3
 		font-weight: 900
 		text-transform: uppercase
 		opacity: 0.05
@@ -152,8 +246,8 @@ h2
 	width: 200px
 	height: 40px
 	font-family: 'Roboto', sans-serif
-	font-size: 18px
-	font-weight: normal
+	font-size: 16px
+	font-weight: 300
 	line-height: normal
 	letter-spacing: 1px
 	text-align: center
@@ -161,9 +255,9 @@ h2
 	border-radius: 20px
 	border: 1px solid transparent
 	background-size: 300% 100%
-	box-shadow: 0 0 10px 0 rgba(168, 165, 165, 0.5)
 	transition: 0.3s background, 0.3s color
 	&--green
+		box-shadow: 0 0 10px 0 rgba(168, 165, 165, 0.5)
 		background-image: linear-gradient(to right, #6ac28e, #3ec0ab 50%, #30dd8a, #2bb673)
 		&:hover
 			background-position: 100% 0
@@ -171,15 +265,16 @@ h2
 		background: transparent
 		border-color: #fff
 		&:hover
-			background: #fff
-	&--white-g
+			background: linear-gradient(to right, #6ac28e, #3ec0ab)
+			border-color: var(--green)
+	&--white
 		background-color: #fff
-		border-color: var(--green)
-		color: var(--dgray)
-	&--white-b
-		background-color: #fff
-		border-color: var(--dgray)
-		color: var(--dgray)
+		border-color: #fff
+		color: var(--green)
+		&:hover
+			background: transparent
+			border-color: #fff
+			color: #fff
 #up
 	visibility: hidden
 	opacity: 0

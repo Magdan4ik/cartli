@@ -1,28 +1,30 @@
-<!DOCTYPE html>
+	<!DOCTYPE html>
 <html lang="ru">
-	<meta charset="utf-8">
-<title>Title</title>
-<meta name="description" content="Cartli - аутсорсинговый колл-центр для обработки входящих заявок">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="theme-color" content="#000">
-<meta name="msapplication-navbutton-color" content="#000">
-<meta name="apple-mobile-web-app-status-bar-style" content="#000">
-<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700|Roboto:300,400,500,700&amp;subset=cyrillic">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"/>
-<link rel="stylesheet" href="css/main.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js" defer></script>
-<script src="js/scripts.js" defer></script>
+    <meta charset="utf-8">
+    <title>Title</title>
+    <meta name="description" content="Cartli - аутсорсинговый колл-центр для обработки входящих заявок">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="theme-color" content="#000">
+    <meta name="msapplication-navbutton-color" content="#000">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700|Roboto:300,400,500,700&amp;subset=cyrillic">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js" defer></script>
+    <script src='https://www.google.com/recaptcha/api.js' async defer></script>
+    <script src="js/scripts.js" defer></script>
 	<body>
 		<header class="header">
     <div class="header__inner container">
         <div class="header__top">
             <p class="header__dep">Связаться с отделом продаж:</p>
-            <a class="header__info header__info--tel" href="tel: +380445864155">+38 (044) 586-41-55</a>
+            <a class="header__info header__info--tel" href="tel:0800212207">0 (800) 212-207</a>
             <a class="header__info header__info--mail" href="mailto: info@cartli.ua">info@cartli.ua</a>
         </div>
         <div class="header__middle">
@@ -45,396 +47,273 @@
     </div>
 </header>
 	<main class="main container">
-
 		<section class="heading">
-			<div class="heading__txt">
-				<h1 class="heading__title">
-					<strong>Аутсорсинговый</strong>
-					<strong>КОЛЛ-ЦЕНТР <b>Cartli</b></strong>
-				</h1>
-				<p class="heading__subtitle">Лучшее решение для вашего бизнеса</p>
-			</div>
-		</section>
-
+    <div class="heading__txt">
+        <h1 class="heading__title">
+            <strong>Аутсорсинговый</strong>
+            <strong>КОЛЛ-ЦЕНТР <b>Cartli</b></strong>
+        </h1>
+        <p class="heading__subtitle">Лучшее решение для вашего бизнеса</p>
+    </div>
+</section>
 		<section class="inform">
-			<section class="service">
-				<div class="title" data-title="Услуги"><b>Услуги</b></div>
-				<div class="service__subtitle">
-					<p class="service__subtitle-upp">ВЫБЕРИТЕ ИНТЕРЕСУЮЩУЮ ВАС УСЛУГУ</p>
-					<p>для сотрудников, руководителей и клиентов</p>
-				</div>
-				<nav class="servblock">
-					<div class="servblock__services">
-						<ul class="servblock__service">
-							<li class="selected" data-serv="serv1">
-								<p class="servblock__name">Входящие сервисы</p>
-								<p class="servblock__desc">Контакт-центр Cartli позволит вам передать в аутсорсинг входящие информационные потоки</p>
-							</li>
-							<li data-serv="serv2">
-								<p class="servblock__name">Исходящие сервисы</p>
-								<p class="servblock__desc">Выходите на связь с клиентами или организовывайте продажи по телефону</p>
-							</li>
-							<li data-serv="serv3">
-								<p class="servblock__name">Дополнительные услуг</p>
-								<p class="servblock__desc">Сервис Cartli позволяет создать систему консультирования посетителей ваших сайтов в режиме 24\7 на русском и английском языках</p>
-							</li>
-						</ul>
-						<div class="servblock__service-selected"></div>
-					</div>
-					<div class="servblock__info">
-						<ul class="servblock__infolist servblock__infolist--active" data-serv="serv1">
-							<li><a href="/uslugi/inside-service/goryachaya-liniya">Горячая линия</a> </li>
-							<li><a href="/uslugi/inside-service/obrabotka-zvonkov-i-zayavok">Обработка звонков и заявок</a> </li>
-							<li><a href="/uslugi/inside-service/organizaciya-spravochnoj-sluzhby">Организация справочной службы</a> </li>
-							<li><a href="/uslugi/inside-service/virtualnyj-ofis">Виртуальный офис</a> </li>
-							<li><a href="/uslugi/inside-service/autsorsing-personala">Аутсорсинг персонала</a> </li>
-							<li><a href="/uslugi/inside-service/autsorsing-priema-zvonkov">Аутсорсинг приема звонков</a> </li>
-						</ul>
-						<ul class="servblock__infolist" data-serv="serv2">
-							<li><a href="/uslugi/ishodyashhie-servisy/telefonnye-oprosy">Телефонные опросы</a> </li>
-							<li><a href="/uslugi/ishodyashhie-servisy/prezentaciya-po-telefonu">Презентация по телефону</a> </li>
-							<li><a href="/uslugi/ishodyashhie-servisy/avtomaticheskij-obzvon">Автоматический обзвон</a> </li>
-							<li><a href="/uslugi/ishodyashhie-servisy/cozdanie-i-aktualizaciya-baz-dannyh">Cоздание и актуализация баз данных</a></li>
-						</ul>
-						<ul class="servblock__infolist" data-serv="serv3">
-							<li><a href="/uslugi/dopolnitelnye-uslugi/virtualnaya-ip-ats">Виртуальная IP АТС</a> </li>
-							<li><a href="/uslugi/dopolnitelnye-uslugi/golosovoe-menyu-ivr">Голосовое меню IVR</a> </li>
-							<li><a href="/uslugi/dopolnitelnye-uslugi/rassylka-golosovyh-soobshhenij">Рассылка голосовых сообщений</a> </li>
-						</ul>
-					</div>
-				</nav>
-			</section>
-			<section class="about">
-				<div class="title" data-title="О нас"><b>О нас</b></div>
-				<h3 class="about__subtitle">Cartli – многопрофильный аутсорсинговый контакт-центр</h3>
-				<div class="about__desc">
-					<p>Услуги колл-центра Cartli строятся на прозрачной работе с клиентами, что позволяет на протяжении 11 лет оказывать качественный сервис и использовать индивидуальный подход в работе не зависимо от масштабности и запросов заказчиков. Качественная обработка звонков и заявок поможет не только расширить базу клиентов, но и существенно сэкономит Ваш бюджет на подборе персонала и его обучении.</p>
-					<p><strong>Многопрофильный аутсорсинговый контакт-центр Cartli</strong> специализируется на предоставлении входящих и исходящих сервисов, а также предлагает внедрение комплексных решений для каждой сферы бизнеса. Владение тонкими техническими нюансами и опытное использование последних технологических разработок позволяют гарантировать высокое качество услуг для оптимизации бизнес-процессов заказчика.</p>
-					<p>Режим 24/7/365 позволит обеспечить стабильное и круглосуточное обслуживание с привязкой к часовому поясу Ваших клиентов.</p>
-					<button type="button" class="btn btn--green about__more">Подробнее</button>
-				</div>
-			</section>
-		</section>
-
-        <!-- GOVNOCODE START -->
+    <section class="service">
+        <div class="title" data-title="Услуги"><b>Услуги</b></div>
+        <div class="service__subtitle">
+            <p class="service__subtitle-upp">ВЫБЕРИТЕ ИНТЕРЕСУЮЩУЮ ВАС УСЛУГУ</p>
+            <p>для сотрудников, руководителей и клиентов</p>
+        </div>
+        <nav class="servblock">
+            <div class="servblock__services">
+                <ul class="servblock__service">
+                    <li class="selected" data-serv="serv1">
+                        <p class="servblock__name">Входящие сервисы</p>
+                        <p class="servblock__desc">Контакт-центр Cartli позволит вам передать в аутсорсинг входящие информационные потоки</p>
+                    </li>
+                    <li data-serv="serv2">
+                        <p class="servblock__name">Исходящие сервисы</p>
+                        <p class="servblock__desc">Выходите на связь с клиентами или организовывайте продажи по телефону</p>
+                    </li>
+                    <li data-serv="serv3">
+                        <p class="servblock__name">Дополнительные услуг</p>
+                        <p class="servblock__desc">Сервис Cartli позволяет создать систему консультирования посетителей ваших сайтов в режиме 24\7 на русском и английском языках</p>
+                    </li>
+                </ul>
+                <div class="servblock__service-selected"></div>
+            </div>
+            <div class="servblock__info">
+                <ul class="servblock__infolist servblock__infolist--active" data-serv="serv1">
+                    <li><a href="/uslugi/inside-service/goryachaya-liniya">Горячая линия</a> </li>
+                    <li><a href="/uslugi/inside-service/obrabotka-zvonkov-i-zayavok">Обработка звонков и заявок</a> </li>
+                    <li><a href="/uslugi/inside-service/organizaciya-spravochnoj-sluzhby">Организация справочной службы</a> </li>
+                    <li><a href="/uslugi/inside-service/virtualnyj-ofis">Виртуальный офис</a> </li>
+                    <li><a href="/uslugi/inside-service/autsorsing-personala">Аутсорсинг персонала</a> </li>
+                    <li><a href="/uslugi/inside-service/autsorsing-priema-zvonkov">Аутсорсинг приема звонков</a> </li>
+                </ul>
+                <ul class="servblock__infolist" data-serv="serv2">
+                    <li><a href="/uslugi/ishodyashhie-servisy/telefonnye-oprosy">Телефонные опросы</a> </li>
+                    <li><a href="/uslugi/ishodyashhie-servisy/prezentaciya-po-telefonu">Презентация по телефону</a> </li>
+                    <li><a href="/uslugi/ishodyashhie-servisy/avtomaticheskij-obzvon">Автоматический обзвон</a> </li>
+                    <li><a href="/uslugi/ishodyashhie-servisy/cozdanie-i-aktualizaciya-baz-dannyh">Cоздание и актуализация баз данных</a></li>
+                </ul>
+                <ul class="servblock__infolist" data-serv="serv3">
+                    <li><a href="/uslugi/dopolnitelnye-uslugi/virtualnaya-ip-ats">Виртуальная IP АТС</a> </li>
+                    <li><a href="/uslugi/dopolnitelnye-uslugi/golosovoe-menyu-ivr">Голосовое меню IVR</a> </li>
+                    <li><a href="/uslugi/dopolnitelnye-uslugi/rassylka-golosovyh-soobshhenij">Рассылка голосовых сообщений</a> </li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+    <section class="about">
+        <div class="title" data-title="О нас"><b>О нас</b></div>
+        <h3 class="about__subtitle">Cartli – многопрофильный аутсорсинговый контакт-центр</h3>
+        <div class="about__desc">
+            <p>Услуги колл-центра Cartli строятся на прозрачной работе с клиентами, что позволяет на протяжении 11 лет оказывать качественный сервис и использовать индивидуальный подход в работе не зависимо от масштабности и запросов заказчиков. Качественная обработка звонков и заявок поможет не только расширить базу клиентов, но и существенно сэкономит Ваш бюджет на подборе персонала и его обучении. Наша миссия - создавать решения, которые помогут развить Ваш бизнес.</p>
+            <p><strong>Многопрофильный аутсорсинговый контакт-центр Cartli</strong> специализируется на предоставлении входящих и исходящих сервисов, а также предлагает внедрение комплексных решений для каждой сферы бизнеса. Владение тонкими техническими нюансами, опытное использование последних технологических разработок, и, что очень важно,  высококвалифицированный персонал -  все это позволяет гарантировать высокое качество услуг для оптимизации бизнес-процессов заказчика.</p>
+            <p>Режим 24/7/365 позволит обеспечить стабильное и круглосуточное обслуживание с привязкой к часовому поясу Ваших клиентов.</p>
+            <button type="button" class="btn btn--green about__more">Подробнее</button>
+        </div>
+    </section>
+</section>
+		<section class="briefcase">
+    <div class="title briefcase__title" data-title="Кейсы"><b>Кейсы</b></div>
+    <nav class="briefcase__nav" hidden>
+        <ul class="briefcase__navlist">
+            <li class="briefcase__navitem briefcase__navitem--active" data-case="case-all"><a class="btn btn--green">Все кейсы</a></li>
+            <li class="briefcase__navitem" data-case="case-001"><a class="btn btn--green">Онлайн и оффлайн торговля</a></li>
+            <li class="briefcase__navitem" data-case="case-002"><a class="btn btn--green">Юридические консультации</a></li>
+            <li class="briefcase__navitem" data-case="case-003"><a class="btn btn--green">Теле и интернет провайдеры</a></li>
+        </ul>
+    </nav>
+    <section class="briefcase__content">
+        <article class="briefcase__article"  data-case="case-001" style="background-image: url('http://cartli.ua/assets/images/bank.png')">
+            <div class="briefcase__article-inner">
+                <h3 class="briefcase__article-title">ПРОЕКТ «ГОРЯЧАЯ ЛИНИЯ ДЛЯ ОДНОГО ИЗ КРУПНЕЙШИХ БАНКОВ УКРАИНЫ»</h3>
+                <a href="#" class="btn btn--trans briefcase__article-link">Подробнее</a>
+            </div>
+        </article>
+        <article class="briefcase__article"  data-case="case-001" style="background-image: url('http://cartli.ua/assets/images/bomond.png')">
+            <div class="briefcase__article-inner">
+                <h3 class="briefcase__article-title">ПРОЕКТ “МАГАЗИН КОСМЕТИКИ И ПАРФЮМЕРИИ «БОМОНД»”</h3>
+                <a href="#" class="btn btn--trans briefcase__article-link">Подробнее</a>
+            </div>
+        </article>
+        <article class="briefcase__article"  data-case="case-001" style="background-image: url('http://cartli.ua/assets/images/moli.png')">
+            <div class="briefcase__article-inner">
+                <h3 class="briefcase__article-title">ПРОЕКТ: «ОФИЦИАЛЬНЫЙ ДИЛЕР МАСЕЛ, ТЕХНИЧЕСКИХ ЖИДКОСТЕЙ, АВТОКОСМЕТИКИ И АВТОЗАПЧАСТЕЙ LIQUI MOLY»</h3>
+                <a href="#" class="btn btn--trans briefcase__article-link">Подробнее</a>
+            </div>
+        </article>
+        <article class="briefcase__article"  data-case="case-002" style="background-image: url('http://cartli.ua/assets/images/bank.png')">
+            <div class="briefcase__article-inner">
+                <h3 class="briefcase__article-title">ПРОЕКТ2 «ГОРЯЧАЯ ЛИНИЯ ДЛЯ ОДНОГО ИЗ КРУПНЕЙШИХ БАНКОВ УКРАИНЫ»</h3>
+                <a href="#" class="btn btn--trans briefcase__article-link">Подробнее</a>
+            </div>
+        </article>
+        <article class="briefcase__article"  data-case="case-002" style="background-image: url('http://cartli.ua/assets/images/bomond.png')">
+            <div class="briefcase__article-inner">
+                <h3 class="briefcase__article-title">ПРОЕКТ2 “МАГАЗИН КОСМЕТИКИ И ПАРФЮМЕРИИ «БОМОНД»”</h3>
+                <a href="#" class="btn btn--trans briefcase__article-link">Подробнее</a>
+            </div>
+        </article>
+        <article class="briefcase__article"  data-case="case-002" style="background-image: url('http://cartli.ua/assets/images/moli.png')">
+            <div class="briefcase__article-inner">
+                <h3 class="briefcase__article-title">ПРОЕКТ2: «ОФИЦИАЛЬНЫЙ ДИЛЕР МАСЕЛ, ТЕХНИЧЕСКИХ ЖИДКОСТЕЙ, АВТОКОСМЕТИКИ И АВТОЗАПЧАСТЕЙ LIQUI MOLY»</h3>
+                <a href="#" class="btn btn--trans briefcase__article-link">Подробнее</a>
+            </div>
+        </article>
+    </section>
+</section>
+		<service class="solution">
+    <div class="solution__inner">
+        SOLUTION
+    </div>
+</service>
+		<section class="contacts">
+    <div class="contacts__inner">
+        <div class="title contacts__title" data-title="Обратная связь"><b>Обратная связь</b></div>
+        <form action="/assets/templates/cartli/ajax/main_page_contact.php" method="post" class="contacts__form" id="contact-form">
+			<input name="name" type="text" placeholder="Имя*" aria-label="Имя" data-r="required">
+			<input name="company" type="text" placeholder="Компания" aria-label="Компания">
+			<input name="tel" type="tel" placeholder="Телефон*" aria-label="Телефон" data-r="required">
+			<select name="service">
+				<optgroup label="Входящие сервисы">
+                    <option>Горячая линия</option>
+                    <option>Обработка звонков и заявок</option>
+                    <option>Организация справочной службы</option>
+                    <option>Виртуальный офис</option>
+                    <option>Аутсорсинг персонала</option>
+                    <option>Аутсорсинг приема звонков</option>
+				</optgroup>
+				<optgroup label="Исходящие сервисы">
+                     <option>Телефонные опросы</option>
+                     <option>Презентация по телефону</option>
+                     <option>Автоматический обзвон</option>
+                     <option>Cоздание и актуализация баз данных</option>
+				</optgroup>	
+				<optgroup label="Дополнительные услуги">
+                     <option>Виртуальная IP АТС</option>
+                     <option>Голосовое меню IVR</option>
+                     <option>Рассылка голосовых сообщений</option>
+				</optgroup>
+			</select>
+			<textarea placeholder="Сообщение" name="text" aria-label="Сообщение"></textarea>
+			<input name="email" type="email" placeholder="E-mail*" aria-label="E-mail" data-r="required">
+			<div class="contacts__confirm">
+				<div class="g-recaptcha" data-sitekey="6LdPNXkUAAAAALlgFT-43nyUWynWIOWuYGRZG_SZ" data-size="compact"><div style="width: 164px; height: 144px;"><div><iframe src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LdPNXkUAAAAALlgFT-43nyUWynWIOWuYGRZG_SZ&amp;co=aHR0cHM6Ly9jYXJ0bGkudWE6NDQz&amp;hl=ru&amp;v=v1552285980763&amp;size=compact&amp;cb=8604kepn0ge4" width="164" height="144" role="presentation" name="a-kicw3jhlhd3g" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div></div>
+				<button type="submit" class="btn btn--white">Отправить</button>
+			</div>
+		</form>
+    </div>
+</section>
 		<section class="clients">
-			<h2 class="clients__title">Наши клиенты</h2>
-			<div class="clients__sliders">
-				<ul class="clients__slider-desc">
-					<li>
-						<b>«Tv Rus Tv»</b> - компания которая предоставляет услуги интернет-телевидения. Для данной компании мы реализовали техническое
-						решение, для обработки большого потока входящих звонков. Также было найдено решение для организации технической
-						поддержки абонентов компании ТV Rus Tv. Ведется прием заявок и решение проблем нашими техническими специалистами. Сервис
-						работает круглосуточно.
-					</li>
-					<li>
-						<b>«Tv Rus Tv»</b> - компания которая предоставляет услуги интернет-телевидения. Для данной компании мы реализовали техническое
-						решение, для обработки большого потока входящих звонков. Также было найдено решение для организации технической
-						поддержки абонентов компании ТV Rus Tv. Ведется прием заявок и решение проблем нашими техническими специалистами. Сервис
-						работает круглосуточно.
-					</li>
-					<li>
-						<b>«Tv Rus Tv»</b> - компания которая предоставляет услуги интернет-телевидения. Для данной компании мы реализовали техническое
-						решение, для обработки большого потока входящих звонков. Также было найдено решение для организации технической
-						поддержки абонентов компании ТV Rus Tv. Ведется прием заявок и решение проблем нашими техническими специалистами. Сервис
-						работает круглосуточно.
-					</li>
-					<li>
-						<b>«Tv Rus Tv»</b> - компания которая предоставляет услуги интернет-телевидения. Для данной компании мы реализовали техническое
-						решение, для обработки большого потока входящих звонков. Также было найдено решение для организации технической
-						поддержки абонентов компании ТV Rus Tv. Ведется прием заявок и решение проблем нашими техническими специалистами. Сервис
-						работает круглосуточно.
-					</li>
-					<li>
-						<b>«Tv Rus Tv»</b> - компания которая предоставляет услуги интернет-телевидения. Для данной компании мы реализовали техническое
-						решение, для обработки большого потока входящих звонков. Также было найдено решение для организации технической
-						поддержки абонентов компании ТV Rus Tv. Ведется прием заявок и решение проблем нашими техническими специалистами. Сервис
-						работает круглосуточно.
-					</li>
-					<li>
-						<b>«Tv Rus Tv»</b> - компания которая предоставляет услуги интернет-телевидения. Для данной компании мы реализовали техническое
-						решение, для обработки большого потока входящих звонков. Также было найдено решение для организации технической
-						поддержки абонентов компании ТV Rus Tv. Ведется прием заявок и решение проблем нашими техническими специалистами. Сервис
-						работает круглосуточно.
-					</li>
-				</ul>
-				<ul class="clients__slider-img">
-					<li><figure><img src="img/clients/1.png"></figure></li>
-					<li><figure><img src="img/clients/2.png"></figure></li>
-					<li><figure><img src="img/clients/3.png"></figure></li>
-					<li><figure><img src="img/clients/4.png"></figure></li>
-					<li><figure><img src="img/clients/5.png"></figure></li>
-					<li><figure><img src="img/clients/6.png"></figure></li>
-					<li><figure><img src="img/clients/7.png"></figure></li>
-					<li><figure><img src="img/clients/8.png"></figure></li>
-					<li><figure><img src="img/clients/9.png"></figure></li>
-					<li><figure><img src="img/clients/10.png"></figure></li>
-					<li><figure><img src="img/clients/11.png"></figure></li>
-					<li><figure><img src="img/clients/12.png"></figure></li>
-					<li><figure><img src="img/clients/13.png"></figure></li>
-					<li><figure><img src="img/clients/14.png"></figure></li>
-					<li><figure><img src="img/clients/15.png"></figure></li>
-					<li><figure><img src="img/clients/16.png"></figure></li>
-					<li><figure><img src="img/clients/17.png"></figure></li>
-					<li><figure><img src="img/clients/18.png"></figure></li>
-					<li><figure><img src="img/clients/19.png"></figure></li>
-					<li><figure><img src="img/clients/20.png"></figure></li>
-					<li><figure><img src="img/clients/21.png"></figure></li>
-					<li><figure><img src="img/clients/22.png"></figure></li>
-					<li><figure><img src="img/clients/23.png"></figure></li>
-					<li><figure><img src="img/clients/24.png"></figure></li>
-					<li><figure><img src="img/clients/25.png"></figure></li>
-					<li><figure><img src="img/clients/26.png"></figure></li>
-					<li><figure><img src="img/clients/27.png"></figure></li>
-					<li><figure><img src="img/clients/28.png"></figure></li>
-					<li><figure><img src="img/clients/29.png"></figure></li>
-					<li><figure><img src="img/clients/30.png"></figure></li>
-					<li><figure><img src="img/clients/31.png"></figure></li>
-					<li><figure><img src="img/clients/32.png"></figure></li>
-					<li><figure><img src="img/clients/33.png"></figure></li>
-					<li><figure><img src="img/clients/34.png"></figure></li>
-					<li><figure><img src="img/clients/35.png"></figure></li>
-					<li><figure><img src="img/clients/36.png"></figure></li>
-					<li><figure><img src="img/clients/37.png"></figure></li>
-					<li><figure><img src="img/clients/38.png"></figure></li>
-					<li><figure><img src="img/clients/39.png"></figure></li>
-					<li><figure><img src="img/clients/40.png"></figure></li>
-					<li><figure><img src="img/clients/41.png"></figure></li>
-					<li><figure><img src="img/clients/42.png"></figure></li>
-					<li><figure><img src="img/clients/43.png"></figure></li>
-					<li><figure><img src="img/clients/44.png"></figure></li>
-					<li><figure><img src="img/clients/45.png"></figure></li>
-					<li><figure><img src="img/clients/46.png"></figure></li>
-					<li><figure><img src="img/clients/47.png"></figure></li>
-					<li><figure><img src="img/clients/48.png"></figure></li>
-					<li><figure><img src="img/clients/49.png"></figure></li>
-					<li><figure><img src="img/clients/50.png"></figure></li>
-					<li><figure><img src="img/clients/51.png"></figure></li>
-					<li><figure><img src="img/clients/52.png"></figure></li>
-					<li><figure><img src="img/clients/53.png"></figure></li>
-					<li><figure><img src="img/clients/54.png"></figure></li>
-					<li><figure><img src="img/clients/55.png"></figure></li>
-					<li><figure><img src="img/clients/56.png"></figure></li>
-					<li><figure><img src="img/clients/57.png"></figure></li>
-					<li><figure><img src="img/clients/58.png"></figure></li>
-					<li><figure><img src="img/clients/59.png"></figure></li>
-					<li><figure><img src="img/clients/50.png"></figure></li>
-					<li><figure><img src="img/clients/60.png"></figure></li>
-					<li><figure><img src="img/clients/61.png"></figure></li>
-				</ul>
-			</div>
+    <h2 class="title briefcase__title" data-title="Наши клиенты"><b>Наши клиенты</b></h2>
+    <div class="clients__sliders">
+        <ul class="clients__slider-desc">
+            <li>
+                <b>«Tv Rus Tv»</b> - компания которая предоставляет услуги интернет-телевидения. Для данной компании мы реализовали техническое
+                решение, для обработки большого потока входящих звонков. Также было найдено решение для организации технической
+                поддержки абонентов компании ТV Rus Tv. Ведется прием заявок и решение проблем нашими техническими специалистами. Сервис
+                работает круглосуточно.
+            </li>
+            <li>
+                <b>«Tv Rus Tv»</b> - компания которая предоставляет услуги интернет-телевидения. Для данной компании мы реализовали техническое
+                решение, для обработки большого потока входящих звонков. Также было найдено решение для организации технической
+                поддержки абонентов компании ТV Rus Tv. Ведется прием заявок и решение проблем нашими техническими специалистами. Сервис
+                работает круглосуточно.
+            </li>
+            <li>
+                <b>«Tv Rus Tv»</b> - компания которая предоставляет услуги интернет-телевидения. Для данной компании мы реализовали техническое
+                решение, для обработки большого потока входящих звонков. Также было найдено решение для организации технической
+                поддержки абонентов компании ТV Rus Tv. Ведется прием заявок и решение проблем нашими техническими специалистами. Сервис
+                работает круглосуточно.
+            </li>
+            <li>
+                <b>«Tv Rus Tv»</b> - компания которая предоставляет услуги интернет-телевидения. Для данной компании мы реализовали техническое
+                решение, для обработки большого потока входящих звонков. Также было найдено решение для организации технической
+                поддержки абонентов компании ТV Rus Tv. Ведется прием заявок и решение проблем нашими техническими специалистами. Сервис
+                работает круглосуточно.
+            </li>
+            <li>
+                <b>«Tv Rus Tv»</b> - компания которая предоставляет услуги интернет-телевидения. Для данной компании мы реализовали техническое
+                решение, для обработки большого потока входящих звонков. Также было найдено решение для организации технической
+                поддержки абонентов компании ТV Rus Tv. Ведется прием заявок и решение проблем нашими техническими специалистами. Сервис
+                работает круглосуточно.
+            </li>
+            <li>
+                <b>«Tv Rus Tv»</b> - компания которая предоставляет услуги интернет-телевидения. Для данной компании мы реализовали техническое
+                решение, для обработки большого потока входящих звонков. Также было найдено решение для организации технической
+                поддержки абонентов компании ТV Rus Tv. Ведется прием заявок и решение проблем нашими техническими специалистами. Сервис
+                работает круглосуточно.
+            </li>
+        </ul>
+        <ul class="clients__slider-img">
+            <li><figure><img src="img/clients/1.png"></figure></li>
+            <li><figure><img src="img/clients/2.png"></figure></li>
+            <li><figure><img src="img/clients/3.png"></figure></li>
+            <li><figure><img src="img/clients/4.png"></figure></li>
+            <li><figure><img src="img/clients/5.png"></figure></li>
+            <li><figure><img src="img/clients/6.png"></figure></li>
+            <li><figure><img src="img/clients/7.png"></figure></li>
+            <li><figure><img src="img/clients/8.png"></figure></li>
+            <li><figure><img src="img/clients/9.png"></figure></li>
+            <li><figure><img src="img/clients/10.png"></figure></li>
+            <li><figure><img src="img/clients/11.png"></figure></li>
+            <li><figure><img src="img/clients/12.png"></figure></li>
+            <li><figure><img src="img/clients/13.png"></figure></li>
+            <li><figure><img src="img/clients/14.png"></figure></li>
+            <li><figure><img src="img/clients/15.png"></figure></li>
+            <li><figure><img src="img/clients/16.png"></figure></li>
+            <li><figure><img src="img/clients/17.png"></figure></li>
+            <li><figure><img src="img/clients/18.png"></figure></li>
+            <li><figure><img src="img/clients/19.png"></figure></li>
+            <li><figure><img src="img/clients/20.png"></figure></li>
+            <li><figure><img src="img/clients/21.png"></figure></li>
+            <li><figure><img src="img/clients/22.png"></figure></li>
+            <li><figure><img src="img/clients/23.png"></figure></li>
+            <li><figure><img src="img/clients/24.png"></figure></li>
+            <li><figure><img src="img/clients/25.png"></figure></li>
+            <li><figure><img src="img/clients/26.png"></figure></li>
+            <li><figure><img src="img/clients/27.png"></figure></li>
+            <li><figure><img src="img/clients/28.png"></figure></li>
+            <li><figure><img src="img/clients/29.png"></figure></li>
+            <li><figure><img src="img/clients/30.png"></figure></li>
+            <li><figure><img src="img/clients/31.png"></figure></li>
+            <li><figure><img src="img/clients/32.png"></figure></li>
+            <li><figure><img src="img/clients/33.png"></figure></li>
+            <li><figure><img src="img/clients/34.png"></figure></li>
+            <li><figure><img src="img/clients/35.png"></figure></li>
+            <li><figure><img src="img/clients/36.png"></figure></li>
+            <li><figure><img src="img/clients/37.png"></figure></li>
+            <li><figure><img src="img/clients/38.png"></figure></li>
+            <li><figure><img src="img/clients/39.png"></figure></li>
+            <li><figure><img src="img/clients/40.png"></figure></li>
+            <li><figure><img src="img/clients/41.png"></figure></li>
+            <li><figure><img src="img/clients/42.png"></figure></li>
+            <li><figure><img src="img/clients/43.png"></figure></li>
+            <li><figure><img src="img/clients/44.png"></figure></li>
+            <li><figure><img src="img/clients/45.png"></figure></li>
+            <li><figure><img src="img/clients/46.png"></figure></li>
+            <li><figure><img src="img/clients/47.png"></figure></li>
+            <li><figure><img src="img/clients/48.png"></figure></li>
+            <li><figure><img src="img/clients/49.png"></figure></li>
+            <li><figure><img src="img/clients/50.png"></figure></li>
+            <li><figure><img src="img/clients/51.png"></figure></li>
+            <li><figure><img src="img/clients/52.png"></figure></li>
+            <li><figure><img src="img/clients/53.png"></figure></li>
+            <li><figure><img src="img/clients/54.png"></figure></li>
+            <li><figure><img src="img/clients/55.png"></figure></li>
+            <li><figure><img src="img/clients/56.png"></figure></li>
+            <li><figure><img src="img/clients/57.png"></figure></li>
+            <li><figure><img src="img/clients/58.png"></figure></li>
+            <li><figure><img src="img/clients/59.png"></figure></li>
+            <li><figure><img src="img/clients/50.png"></figure></li>
+            <li><figure><img src="img/clients/60.png"></figure></li>
+            <li><figure><img src="img/clients/61.png"></figure></li>
+        </ul>
+    </div>
 
-		</section>
-
-<!-- GOVNOCODE END -->
-
-		<section class="bcase" style="display: none">
-			<div class="bcase__container">
-				<h2 class="bcase__title">Кейсы</h2>
-				<ul class="bcase__nav">
-					<li data-tab="case1"><a class="btn">Ullamko</a></li>
-					<li data-tab="case2"><a class="btn">CONSEQUAT</a></li>
-					<li data-tab="case2"><a class="btn">PROIDENT</a></li>
-					<li data-tab="case4" class="current"><a class="btn">DUIS</a></li>
-					<li data-tab="case5"><a class="btn">POSSIMIUS</a></li>
-					<li data-tab="case6"><a class="btn">WEAKNESS</a></li>
-					<li data-tab="case7"><a class="btn">TROUGHT7</a></li>
-					<li data-tab="case8"><a class="btn">POWER</a></li>
-				</ul>
-				<div class="bcase__x-line"></div>
-				<div class="bcase__y-line"></div>
-
-				<div class="bcase__content">
-					<article class="bcase__item active" data-case="case4">
-						<div class="bcase__item-desc">
-							<div class="bcase__item-date">
-								<div class="bcase__item-month">OCTOBER</div>
-								<div class="bcase__item-day">08</div>
-								<div class="bcase__item-year">2012</div>
-							</div>
-							<h3 class="bcase__item-title">CASE: DEVELOPMENT OF THE VKONTAKTE PARTHER</h3>
-							<div class="bcase__item-text">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system ...</div>
-							<div class="bcase__item-footer">
-								<div class="bcase__item-cat">DUIS</div>
-								<a href="#" class="btn btn--white-b bcase__item-more">Подробнее</a>
-							</div>
-						</div>
-						<figure class="bcase__item-img">
-							<img class="bcase-img" src="/img/hyundai.jpg" alt="DEVELOPMENT OF THE VKONTAKTE PARTHER">
-							<img class="bcase-logo" src="/img/hyundai-logo--white.png" alt="DEVELOPMENT OF THE VKONTAKTE PARTHER">
-						</figure>
-					</article>
-					<article class="bcase__item active" data-case="case4">
-						<div class="bcase__item-desc">
-							<div class="bcase__item-date">
-								<div class="bcase__item-month">OCTOBER</div>
-								<div class="bcase__item-day">08</div>
-								<div class="bcase__item-year">2012</div>
-							</div>
-							<h3 class="bcase__item-title">CASE: DEVELOPMENT OF THE VKONTAKTE PARTHER</h3>
-							<div class="bcase__item-text">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system ...</div>
-							<div class="bcase__item-footer">
-								<div class="bcase__item-cat">DUIS</div>
-								<a href="#" class="btn btn--white-b bcase__item-more">Подробнее</a>
-							</div>
-						</div>
-						<figure class="bcase__item-img">
-							<img class="bcase-img" src="/img/henkel.jpg" alt="DEVELOPMENT OF THE VKONTAKTE PARTHER">
-							<img class="bcase-logo" src="/img/henkel-logo.png" alt="DEVELOPMENT OF THE VKONTAKTE PARTHER">
-						</figure>
-					</article>
-					<article class="bcase__item active" data-case="case4">
-						<div class="bcase__item-desc">
-							<div class="bcase__item-date">
-								<div class="bcase__item-month">OCTOBER</div>
-								<div class="bcase__item-day">08</div>
-								<div class="bcase__item-year">2012</div>
-							</div>
-							<h3 class="bcase__item-title">CASE: DEVELOPMENT OF THE VKONTAKTE PARTHER</h3>
-							<div class="bcase__item-text">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system ...</div>
-							<div class="bcase__item-footer">
-								<div class="bcase__item-cat">DUIS</div>
-								<a href="#" class="btn btn--white-b bcase__item-more">Подробнее</a>
-							</div>
-						</div>
-						<figure class="bcase__item-img">
-							<img class="bcase-img" src="/img/viasat.jpg" alt="DEVELOPMENT OF THE VKONTAKTE PARTHER">
-							<img class="bcase-logo" src="/img/viasat-logo.png" alt="DEVELOPMENT OF THE VKONTAKTE PARTHER">
-						</figure>
-					</article>
-					<article class="bcase__item active" data-case="case4">
-						<div class="bcase__item-desc">
-							<div class="bcase__item-date">
-								<div class="bcase__item-month">OCTOBER</div>
-								<div class="bcase__item-day">08</div>
-								<div class="bcase__item-year">2012</div>
-							</div>
-							<h3 class="bcase__item-title">CASE: DEVELOPMENT OF THE VKONTAKTE PARTHER</h3>
-							<div class="bcase__item-text">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system ...</div>
-							<div class="bcase__item-footer">
-								<div class="bcase__item-cat">DUIS</div>
-								<a href="#" class="btn btn--white-b bcase__item-more">Подробнее</a>
-							</div>
-						</div>
-						<figure class="bcase__item-img">
-							<img class="bcase-img" src="/img/speak_up.jpg" alt="DEVELOPMENT OF THE VKONTAKTE PARTHER">
-							<img class="bcase-logo" src="/img/speak_up-logo.png" alt="DEVELOPMENT OF THE VKONTAKTE PARTHER">
-						</figure>
-					</article>
-					<article class="bcase__item" data-case="case1">
-						<div class="bcase__item-desc">
-							<div class="bcase__item-date">
-								<div class="bcase__item-month">OCTOBER</div>
-								<div class="bcase__item-day">08</div>
-								<div class="bcase__item-year">2012</div>
-							</div>
-							<h3 class="bcase__item-title">CASE: DEVELOPMENT OF THE VKONTAKTE PARTHER</h3>
-							<div class="bcase__item-text">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system ...</div>
-							<div class="bcase__item-footer">
-								<div class="bcase__item-cat">ULLAMKO</div>
-								<a href="#" class="btn btn--white-b bcase__item-more">Подробнее</a>
-							</div>
-						</div>
-						<figure class="bcase__item-img">
-							<img class="bcase-img" src="/img/speak_up.jpg" alt="DEVELOPMENT OF THE VKONTAKTE PARTHER">
-							<img class="bcase-logo" src="/img/speak_up-logo.png" alt="DEVELOPMENT OF THE VKONTAKTE PARTHER">
-						</figure>
-					</article>
-					<article class="bcase__item" data-case="case1">
-						<div class="bcase__item-desc">
-							<div class="bcase__item-date">
-								<div class="bcase__item-month">OCTOBER</div>
-								<div class="bcase__item-day">08</div>
-								<div class="bcase__item-year">2012</div>
-							</div>
-							<h3 class="bcase__item-title">CASE: DEVELOPMENT OF THE VKONTAKTE PARTHER</h3>
-							<div class="bcase__item-text">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system ...</div>
-							<div class="bcase__item-footer">
-								<div class="bcase__item-cat">ULLAMKO</div>
-								<a href="#" class="btn btn--white-b bcase__item-more">Подробнее</a>
-							</div>
-						</div>
-						<figure class="bcase__item-img">
-							<img class="bcase-img" src="/img/speak_up.jpg" alt="DEVELOPMENT OF THE VKONTAKTE PARTHER">
-							<img class="bcase-logo" src="/img/speak_up-logo.png" alt="DEVELOPMENT OF THE VKONTAKTE PARTHER">
-						</figure>
-					</article>
-					<div class="bcase__all">
-						<a href="#cases" class="btn btn--green">Все кейсы</a>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="service" hidden>
-			<h2 class="service__title">Услуги</h2>
-			<div class="service__info">
-				<div class="service__subtitle">
-					<p class="upper">Выберите интересующую Вас услугу:</p>
-					<p>для сотрудников, руководителей и клиентов</p>
-				</div>
-			</div>
-			<div class="service__module">
-				<ul class="service__tabs">
-					<li data-tab="serv1" class="active"><span>Входящие сервисы</span></li>
-					<li data-tab="serv2"><span>Исходящие сервисы</span></li>
-					<li data-tab="serv3"><span>Дополнительные услуги</span></li>
-				</ul>
-				<div class="service__tabscontent">
-					<ul class="service__list active" data-service="serv1">
-						<li><a href="/uslugi/inside-service/goryachaya-liniya">Горячая линия</a></li>
-						<li><a href="/uslugi/inside-service/obrabotka-zvonkov-i-zayavok">Обработка звонков и заявок</a></li>
-						<li><a href="/uslugi/inside-service/organizaciya-spravochnoj-sluzhby">Организация справочной службы</a></li>
-						<li><a href="/uslugi/inside-service/virtualnyj-ofis">Виртуальный офис</a></li>
-						<li><a href="/uslugi/inside-service/autsorsing-personala">Аутсорсинг персонала</a></li>						
-						<li><a href="/uslugi/inside-service/autsorsing-priema-zvonkov">Аутсорсинг приема звонков</a></li>
-					</ul>
-					<ul class="service__list" data-service="serv2">
-						<li><a href="/uslugi/ishodyashhie-servisy/telemarketing">Телемаркетинг</a></li>
-						<li><a href="/uslugi/ishodyashhie-servisy/telefonnye-oprosy">Телефонные опросы</a></li>
-						<li><a href="/uslugi/ishodyashhie-servisy/prezentaciya-po-telefonu">Презентация по телефону</a></li>
-						<li><a href="/uslugi/ishodyashhie-servisy/avtomaticheskij-obzvon">Автоматический обзвон</a></li>
-						<li><a href="/uslugi/ishodyashhie-servisy/cozdanie-i-aktualizaciya-baz-dannyh">Cоздание и актуализация баз данных</a></li>
-					</ul>
-					<ul class="service__list" data-service="serv3">
-						<li><a href="/uslugi/dopolnitelnye-uslugi/virtualnaya-ip-ats">Виртуальная IP АТС</a></li>
-						<li><a href="/uslugi/dopolnitelnye-uslugi/golosovoe-menyu-ivr">Голосовое меню IVR</a></li>
-						<li><a href="/uslugi/dopolnitelnye-uslugi/rassylka-golosovyh-soobshhenij">Рассылка голосовых сообщений</a></li>
-					</ul>
-				</div>
-			</div>
-		</section>
-
-
-		<service class="contacts">
-			<div class="contacts__inner">
-				<h2 class="contacts__title">Обратная связь</h2>
-				<form action="#" class="contacts__form" id="contact-form">
-					<input type="text" placeholder="Имя*" aria-label="Имя" require>
-					<input type="tel" placeholder="Телефон*" aria-label="Телефон" require>
-					<input type="email" placeholder="E-mail*" aria-label="E-mail" require>
-					<textarea placeholder="Сообщение" aria-label="Сообщение"></textarea>
-					<input type="text" placeholder="Компания" aria-label="Компания">
-					<input type="text" placeholder="Услуга" aria-label="Услуга">
-					<button type="submit" class="btn btn--green">Отправить</button>
-				</form>
-				<div class="contacts__info">
-					<div class="contacts__info-numb">
-						<p>Специалисты нашей компании всегда готовы ответить на Ваши вопросы.</p>
-						<p>С нами Вы можете связаться по телефонам: </p>
-						<div class="contacts__info-tel">
-							<a href="tel:+380445864155">+38 044 586 41 55</a>
-							<a href="tel:+380432579039">+38 0432 57 90 39</a>
-						</div>
-					</div>
-					<div class="contacts__info-time">
-						<p>Мы работаем:</p>
-						<p class="contacts__info-day bolder">Пн-Пт: 08:00 – 20:00</p>
-						<p class="contacts__info-day">Сб: 09.00 – 18.00</p>
-					</div>
-				</div>
-			</div>
-		</service>
+</section>
 	</main>
     <footer class="footer">
     <div class="footer__inner container">
