@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="170" height="138" viewBox="0 0 170 138">
+    <defs>
+        <filter id="a" width="126.7%" height="133.6%" x="-13.3%" y="-16.8%" filterUnits="objectBoundingBox">
+            <feOffset in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="5"/>
+            <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1" values="0 0 0 0 0.607843137 0 0 0 0 0.576470588 0 0 0 0 0.576470588 0 0 0 0.5 0"/>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+        <linearGradient id="b" x1="-19.135%" x2="124.498%" y1="50.022%" y2="50.022%">
+            <stop offset="0%" stop-color="#6AC28D"/>
+            <stop offset="100%" stop-color="#3DC0AB"/>
+        </linearGradient>
+        <linearGradient id="c" x1="-4.103%" x2="188.646%" y1="50.024%" y2="50.024%">
+            <stop offset="0%" stop-color="#6AC28D"/>
+            <stop offset="100%" stop-color="#3DC0AB"/>
+        </linearGradient>
+        <linearGradient id="d" x1="3.148%" x2="112.989%" y1="56.592%" y2="41.185%">
+            <stop offset="0%" stop-color="#6AC28D"/>
+            <stop offset="100%" stop-color="#3DC0AB"/>
+        </linearGradient>
+        <linearGradient id="e" x1="-135.135%" x2="113.023%" y1="50.021%" y2="50.021%">
+            <stop offset="0%" stop-color="#6AC28D"/>
+            <stop offset="100%" stop-color="#3DC0AB"/>
+        </linearGradient>
+    </defs>
+    <g fill="none" fill-rule="nonzero" transform="translate(5 1)">
+        <circle cx="7.5" cy="111.5" r="7.5" stroke="#64C292"/>
+        <circle cx="40.5" cy="24.5" r="7.5" stroke="#64C292"/>
+        <circle cx="141" cy="119" r="5" fill="#227967"/>
+        <circle cx="108.5" cy="2.5" r="2.5" fill="#60C09D"/>
+        <g filter="url(#a)" transform="translate(5 9)">
+            <ellipse cx="73.446" cy="47.77" fill="url(#b)" rx="57.635" ry="47.635"/>
+            <circle cx="35.946" cy="61.892" r="35.405" fill="url(#c)"/>
+            <path fill="url(#d)" d="M123.446 78.851c-3.243-16.08-25.338-25.202-49.324-20.405-23.987 4.797-40.744 21.824-37.5 37.905 3.243 16.081 25.337 25.203 49.324 20.406 23.986-4.798 40.743-21.825 37.5-37.906z"/>
+            <circle cx="122.432" cy="52.365" r="27.5" fill="url(#e)"/>
+        </g>
+        <g transform="translate(46 24)">
+            <circle cx="32.46" cy="33.078" r="32.46" fill="#FFF"/>
+            <path fill="#1FB69B" d="M9.274 19.167h46.68v46.68H9.274z"/>
+            <path fill="#FFF" d="M67.625 68.552h-.773c-.619 0-1.16-.541-1.16-1.16 0-.618.541-1.159 1.16-1.159h.773c.618 0 1.159.541 1.159 1.16 0 .695-.541 1.159-1.16 1.159zM62.987 68.63H1.932c-.618 0-1.16-.542-1.16-1.16 0-.618.542-1.16 1.16-1.16h61.055c.619 0 1.16.542 1.16 1.16 0 .618-.541 1.16-1.16 1.16z"/>
+            <path fill="#227967" d="M32.614 19.167h23.34v46.68h-23.34z"/>
+            <path fill="#FFF" d="M16.539 26.432h31.996v31.996H16.54z"/>
+            <path fill="#BBBBC2" d="M32.614 26.432h15.998v31.996H32.614z"/>
+            <circle cx="32.614" cy="42.43" r="4.405" fill="#FFF"/>
+            <path fill="#60C09D" d="M32.614 38.102v8.81c2.396 0 4.406-2.01 4.406-4.405a4.403 4.403 0 0 0-4.406-4.405z"/>
+            <path fill="#1FB69B" d="M38.41 42.43c0-1.082-.308-2.087-.85-3.015l4.715-4.714-2.087-2.087-4.714 4.715c-.85-.541-1.855-.85-3.014-.85-1.16 0-2.087.309-3.014.85l-4.715-4.715-1.855 2.164 4.715 4.715c-.541.85-.85 1.855-.85 3.014 0 1.082.309 2.087.85 3.014l-4.715 4.714 2.087 2.087 4.714-4.714c.85.54 1.855.85 3.015.85 1.159 0 2.086-.31 3.014-.85l4.714 4.714 2.087-2.087-4.715-4.714a7.876 7.876 0 0 0 .619-3.091zm-5.796 3.014a2.936 2.936 0 0 1-2.937-2.937 2.936 2.936 0 0 1 2.937-2.937 2.936 2.936 0 0 1 2.937 2.937c0 1.546-1.314 2.937-2.937 2.937z"/>
+            <path fill="#29343D" d="M38.41 42.43c0-1.082-.308-2.087-.85-3.015l4.715-4.714-2.087-2.087-4.714 4.715c-.85-.541-1.855-.85-3.014-.85v2.936a2.936 2.936 0 0 1 2.937 2.937 2.936 2.936 0 0 1-2.937 2.937v2.937c1.082 0 2.086-.31 3.014-.85l4.714 4.714 2.087-2.087-4.714-4.714c.618-.695.85-1.7.85-2.86z"/>
+            <path fill="#094970" d="M42.043 65.692h9.274v2.937h-9.274z"/>
+            <path fill="#227967" d="M13.757 65.692h9.274v2.937h-9.274zM6.183 34.778h11.902v2.937H6.183zM6.183 47.299h11.902v2.936H6.183z"/>
+            <path fill="#29343D" d="M42.043 65.692h9.274v2.937h-9.274z"/>
+        </g>
+        <circle cx="31.5" cy="63.5" r="1.5" fill="#227967"/>
+        <circle cx="139.5" cy="68.5" r="1.5" fill="#227967"/>
+    </g>
+</svg>

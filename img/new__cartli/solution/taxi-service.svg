@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="171" height="135" viewBox="0 0 171 135">
+    <defs>
+        <filter id="a" width="126.7%" height="135.3%" x="-13.3%" y="-17.3%" filterUnits="objectBoundingBox">
+            <feOffset in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="5"/>
+            <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1" values="0 0 0 0 0.607843137 0 0 0 0 0.576470588 0 0 0 0 0.576470588 0 0 0 0.5 0"/>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+        <linearGradient id="b" x1="-205.062%" x2="147.823%" y1="92.383%" y2="33.728%">
+            <stop offset="0%" stop-color="#6AC28D"/>
+            <stop offset="100%" stop-color="#3DC0AB"/>
+        </linearGradient>
+        <linearGradient id="c" x1="-58.593%" x2="398.627%" y1="68.02%" y2="-7.762%">
+            <stop offset="0%" stop-color="#6AC28D"/>
+            <stop offset="100%" stop-color="#3DC0AB"/>
+        </linearGradient>
+        <linearGradient id="d" x1="-105.985%" x2="321.338%" y1="99.112%" y2="-35.473%">
+            <stop offset="0%" stop-color="#6AC28D"/>
+            <stop offset="100%" stop-color="#3DC0AB"/>
+        </linearGradient>
+        <linearGradient id="e" x1="-78.94%" x2="260.285%" y1="71.323%" y2="15.098%">
+            <stop offset="0%" stop-color="#6AC28D"/>
+            <stop offset="100%" stop-color="#3DC0AB"/>
+        </linearGradient>
+    </defs>
+    <g fill="none" fill-rule="evenodd" transform="translate(1 5)">
+        <circle cx="143.5" cy="112.5" r="7.5" fill-rule="nonzero" stroke="#64C292"/>
+        <circle cx="29.5" cy="93.5" r="1.5" fill="#227967" fill-rule="nonzero"/>
+        <circle cx="146.5" cy="2.5" r="2.5" fill="#60C09D" fill-rule="nonzero"/>
+        <g fill-rule="nonzero" filter="url(#a)" transform="translate(11 5)">
+            <ellipse cx="102.467" cy="47" fill="url(#b)" rx="46.867" ry="47"/>
+            <circle cx="26.467" cy="53.267" r="25.933" fill="url(#c)"/>
+            <path fill="url(#d)" d="M99.8 22.333C96.6 6.467 74.8-2.533 51.133 2.2c-23.666 4.733-40.2 21.533-37 37.4 3.2 15.867 25 24.867 48.667 20.133 23.6-4.8 40.2-21.533 37-37.4z"/>
+            <circle cx="60.8" cy="88.2" r="27.133" fill="url(#e)"/>
+        </g>
+        <g transform="translate(57 24.333)">
+            <circle cx="28" cy="28" r="28" fill="#FFF" fill-rule="nonzero"/>
+            <path fill="#29343D" fill-rule="nonzero" d="M13.467 43H9.933c-1.2 0-2.2 1-2.2 2.2v8.867c0 1.2 1 2.2 2.2 2.2h3.534c1.2 0 2.2-1 2.2-2.2V45.2c0-1.2-1-2.2-2.2-2.2zM46.467 43.333h-3.534c-1.2 0-2.2 1-2.2 2.2V54.4c0 1.2 1 2.2 2.2 2.2h3.534c1.2 0 2.2-1 2.2-2.2v-8.867c0-1.2-1-2.2-2.2-2.2z"/>
+            <path fill="#227967" fill-rule="nonzero" d="M45 26.333v6c.2 0 3.333-.4 5.333 2C52 36.267 51.733 38.6 51.667 39v9.333H28V19.667h10.333c.467 0 2.8.133 4.667 2 1.867 1.866 2 4.2 2 4.666z"/>
+            <path fill="#1FB69B" fill-rule="nonzero" d="M28 48H5.333V38c0-.467-.066-2.333 1.334-4C8.4 31.933 11 32 11.333 32v-5.333c.067-.667.267-2.8 2-4.667a7.721 7.721 0 0 1 4.134-2.333H28V48z"/>
+            <path fill="#FFF" fill-rule="nonzero" d="M36.467 47.333H19.533A1.509 1.509 0 0 1 18 45.8v-1.6c0-.867.667-1.533 1.533-1.533h16.934c.866 0 1.533.666 1.533 1.533v1.6c0 .867-.667 1.533-1.533 1.533z"/>
+            <path fill="#227967" fill-rule="nonzero" d="M10 44.667h18V48H10z"/>
+            <path fill="#60C09D" fill-rule="nonzero" d="M28 44.667h18V48H28z"/>
+            <path stroke="#29343D" stroke-width="3" d="M11.333 34v-7.6c0-3.667 3-6.667 6.667-6.667h20.333c3.667 0 6.667 3 6.667 6.667V34c0 3.667-33.667 3.667-33.667 0z"/>
+            <path stroke="#29343D" stroke-width="3" d="M51.667 48.333H5V37.667c0-2.6 2.133-4.934 4.667-5.267l.666-.067c11.734-1.333 23.6-1.4 35.4-.066l.667.066c2.933 0 5.333 2.4 5.333 5.334v10.666h-.066z"/>
+            <path fill="#29343D" fill-rule="nonzero" d="M22.667 19.333h10.666V18c0-1.067-.866-2-2-2h-6.666c-1.067 0-2 .867-2 2v1.333zM53.333 49.333h-50C2.6 49.333 2 48.733 2 48s.6-1.333 1.333-1.333h50c.734 0 1.334.6 1.334 1.333s-.6 1.333-1.334 1.333z"/>
+            <path fill="#FFF" fill-rule="nonzero" d="M14.267 38.667H8.333c-.6 0-1.066-.467-1.066-1.067v-1.933c0-.6.466-1.067 1.066-1.067h5.934c.6 0 1.066.467 1.066 1.067V37.6c0 .6-.466 1.067-1.066 1.067zM48.2 38.667h-5.733c-.6 0-1.134-.534-1.134-1.134V35.8c0-.6.534-1.133 1.134-1.133H48.2c.6 0 1.133.533 1.133 1.133v1.733c0 .6-.533 1.134-1.133 1.134zM55 58.667H2.333c-.533 0-1-.467-1-1 0-.534.467-1 1-1H55c.533 0 1 .466 1 1 0 .533-.467 1-1 1zM59 58.667h-.667c-.533 0-1-.467-1-1 0-.534.467-1 1-1H59c.533 0 1 .466 1 1 0 .533-.467 1-1 1z"/>
+        </g>
+        <circle cx="55" cy="21" r="5" fill="#227967" fill-rule="nonzero"/>
+        <circle cx="7.5" cy="42.5" r="7.5" fill-rule="nonzero" stroke="#64C292"/>
+    </g>
+</svg>

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="170" height="136" viewBox="0 0 170 136">
+    <defs>
+        <filter id="a" width="126.7%" height="136.7%" x="-13.3%" y="-18.3%" filterUnits="objectBoundingBox">
+            <feOffset in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="5"/>
+            <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1" values="0 0 0 0 0.607541454 0 0 0 0 0.577492795 0 0 0 0 0.577492795 0 0 0 0.5 0"/>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+        <linearGradient id="b" x1="-206.524%" x2="148.377%" y1="92.518%" y2="33.694%">
+            <stop offset="0%" stop-color="#6AC28D"/>
+            <stop offset="100%" stop-color="#3DC0AB"/>
+        </linearGradient>
+        <linearGradient id="c" x1="-58.586%" x2="398.485%" y1="67.998%" y2="-7.76%">
+            <stop offset="0%" stop-color="#6AC28D"/>
+            <stop offset="100%" stop-color="#3DC0AB"/>
+        </linearGradient>
+        <linearGradient id="d" x1="-116.822%" x2="340.249%" y1="77.65%" y2="1.892%">
+            <stop offset="0%" stop-color="#6AC28D"/>
+            <stop offset="100%" stop-color="#3DC0AB"/>
+        </linearGradient>
+        <linearGradient id="e" x1="-70.986%" x2="176.282%" y1="60.848%" y2="38.677%">
+            <stop offset="0%" stop-color="#6AC28D"/>
+            <stop offset="100%" stop-color="#3DC0AB"/>
+        </linearGradient>
+        <linearGradient id="f" x1="-78.789%" x2="260.163%" y1="71.346%" y2="15.166%">
+            <stop offset="0%" stop-color="#6AC28D"/>
+            <stop offset="100%" stop-color="#3DC0AB"/>
+        </linearGradient>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g fill-rule="nonzero" filter="url(#a)" transform="translate(10 17.417)">
+            <circle cx="121.413" cy="28.587" r="28.587" fill="url(#b)"/>
+            <circle cx="22.197" cy="40.359" r="22.197" fill="url(#c)"/>
+            <circle cx="47.758" cy="34.305" r="22.197" fill="url(#d)"/>
+            <ellipse cx="77.354" cy="56.502" fill="url(#e)" rx="41.031" ry="22.197"/>
+            <circle cx="58.184" cy="78.363" r="29.933" fill="url(#f)"/>
+        </g>
+        <path fill="#29343D" fill-rule="nonzero" d="M43.027 62.552h81.39v20.179h-81.39z"/>
+        <text fill="#FFF" font-family="Helvetica" font-size="15" transform="translate(10 8)">
+            <tspan x="57.291" y="68.24">shop</tspan>
+        </text>
+        <path fill="#FFF" fill-rule="nonzero" d="M49.686 30.197h67.937v32.287H49.686z"/>
+        <path fill="#227967" fill-rule="nonzero" d="M63.139 40.287h41.031v18.834H63.139z"/>
+        <path fill="#FFF" fill-rule="nonzero" stroke="#FFF" d="M75.92 52.395l12.107-6.054M81.3 52.395l12.108-6.054"/>
+        <path fill="#1A6055" fill-rule="nonzero" d="M51.839 35.578h-4.776c-2.624 0-4.776-2.152-4.776-4.775v-5.314c0 .605 4.776-5.381 4.776-5.381h4.776c2.623 0 4.775 2.152 4.775 4.775v5.92c.068 2.623-2.085 4.775-4.775 4.775zM115.673 35.578h4.775c2.624 0 4.776-2.152 4.776-4.775v-5.314c0 .605-4.776-5.381-4.776-5.381h-4.775c-2.624 0-4.776 2.152-4.776 4.775v5.92c0 2.623 2.152 4.775 4.776 4.775z"/>
+        <path fill="#1FB69B" fill-rule="nonzero" d="M71.143 35.578h-9.955c-2.623 0-4.775-2.152-4.775-4.775v-5.92c0-2.623 2.152-4.775 4.775-4.775h9.955c2.624 0 4.776 2.152 4.776 4.775v5.92c0 2.623-2.152 4.775-4.776 4.775zM106.121 35.578h-9.955c-2.623 0-4.776-2.152-4.776-4.775v-5.92c0-2.623 2.153-4.775 4.776-4.775h9.955c2.623 0 4.776 2.152 4.776 4.775v5.92c0 2.623-2.153 4.775-4.776 4.775z"/>
+        <path fill="#1A6055" fill-rule="nonzero" d="M86.48 35.578h-5.583c-2.69 0-4.91-2.22-4.91-4.91v-5.583s2.22-4.91 4.91-4.91h5.583c2.69 0 4.91 4.91 4.91 4.91v5.583c0 2.69-2.22 4.91-4.91 4.91z"/>
+        <path fill="#227967" fill-rule="nonzero" d="M56.413 25.489H42.287L55.067 8h11.435zM91.39 25.489H75.92L77.936 8h11.435z"/>
+        <path fill="#60C09D" fill-rule="nonzero" d="M75.92 25.489H56.412L66.503 8h11.434zM91.39 25.489h19.507L100.807 8H89.372z"/>
+        <path fill="#227967" fill-rule="nonzero" d="M110.897 25.489h14.125L112.242 8h-11.435z"/>
+        <g fill-rule="nonzero" transform="translate(21)">
+            <circle cx="7.5" cy="16.5" r="7.5" stroke="#64C292"/>
+            <circle cx="106.5" cy="109.5" r="7.5" stroke="#64C292"/>
+            <circle cx="5" cy="94" r="5" fill="#227967"/>
+            <circle cx="25.5" cy="1.5" r="1.5" fill="#227967"/>
+            <circle cx="135.5" cy="75.5" r="2.5" fill="#60C09D"/>
+        </g>
+    </g>
+</svg>

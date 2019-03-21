@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="179" height="124" viewBox="0 0 179 124">
+    <defs>
+        <linearGradient id="a" x1="-206.544%" x2="148.392%" y1="92.513%" y2="33.685%">
+            <stop offset="0%" stop-color="#6AC28D"/>
+            <stop offset="100%" stop-color="#3DC0AB"/>
+        </linearGradient>
+        <linearGradient id="b" x1="-58.586%" x2="398.496%" y1="68.003%" y2="-7.768%">
+            <stop offset="0%" stop-color="#6AC28D"/>
+            <stop offset="100%" stop-color="#3DC0AB"/>
+        </linearGradient>
+        <linearGradient id="c" x1="-116.829%" x2="340.253%" y1="77.658%" y2="1.886%">
+            <stop offset="0%" stop-color="#6AC28D"/>
+            <stop offset="100%" stop-color="#3DC0AB"/>
+        </linearGradient>
+        <linearGradient id="d" x1="-70.983%" x2="176.277%" y1="60.845%" y2="38.676%">
+            <stop offset="0%" stop-color="#6AC28D"/>
+            <stop offset="100%" stop-color="#3DC0AB"/>
+        </linearGradient>
+        <linearGradient id="e" x1="-78.795%" x2="260.172%" y1="71.352%" y2="15.17%">
+            <stop offset="0%" stop-color="#6AC28D"/>
+            <stop offset="100%" stop-color="#3DC0AB"/>
+        </linearGradient>
+    </defs>
+    <g fill="none" fill-rule="nonzero">
+        <g transform="translate(15)">
+            <circle cx="117.067" cy="50.59" r="32.839" fill="url(#a)"/>
+            <circle cx="52.587" cy="50.845" r="25.5" fill="url(#b)"/>
+            <circle cx="78.047" cy="25.5" r="25.5" fill="url(#c)"/>
+            <ellipse cx="82.917" cy="85.52" fill="url(#d)" rx="47.139" ry="25.5"/>
+            <circle cx="34.386" cy="83.038" r="34.386" fill="url(#e)"/>
+            <circle cx="73.991" cy="58.52" r="25.561" fill="#1FB69B"/>
+            <path fill="#227967" d="M74.24 84.08c14.02-.136 25.312-11.54 25.312-25.56L84.229 43.23l-14.462-2.764-3.895 4.884 7.85 7.843-10.58 19.776L74.24 84.08z"/>
+            <path fill="#FFF" d="M78.35 49.103a6.161 6.161 0 0 0-8.745 0l-2.118-2.119a9.1 9.1 0 0 1 6.477-2.69 9.1 9.1 0 0 1 6.478 2.69l-2.092 2.12z"/>
+            <path fill="#E9EDF5" d="M73.991 44.307V47.3a6.121 6.121 0 0 1 4.359 1.803l2.119-2.119a9.1 9.1 0 0 0-6.478-2.677z"/>
+            <path fill="#FFF" d="M82.11 45.35c-4.487-4.477-11.75-4.477-16.238 0l-2.119-2.12c5.658-5.644 14.818-5.644 20.476 0l-2.12 2.12z"/>
+            <path fill="#E9EDF5" d="M73.991 39.013v2.994a11.435 11.435 0 0 1 8.132 3.363l2.12-2.119a14.435 14.435 0 0 0-10.252-4.238z"/>
+            <path fill="#227967" d="M73.991 84.08a25.493 25.493 0 0 0 9.33-1.755L73.99 68.28l-9.33 14.045a25.493 25.493 0 0 0 9.33 1.756z"/>
+            <path fill="#1A6055" d="M83.32 82.325L73.992 68.28v15.8a25.494 25.494 0 0 0 9.33-1.755z"/>
+            <path fill="#DCE1EB" d="M76.77 53.865a3.256 3.256 0 1 0-5.564 0l-9.76 14.691 2.993 2.018 9.552-14.401 9.552 14.367 2.993-2.018-9.767-14.657z"/>
+            <path fill="#CDD2E1" d="M76.77 53.865a3.256 3.256 0 0 0-2.779-4.943v7.25l9.552 14.368 2.993-2.018-9.767-14.657z"/>
+            <path fill="#FFF" d="M56.193 61.688a18.074 18.074 0 0 0 35.596 0H56.193z"/>
+            <path fill="#E9EDF5" d="M73.991 61.688v14.906a18.08 18.08 0 0 0 17.798-14.906H73.991z"/>
+        </g>
+        <g transform="translate(0 5)">
+            <circle cx="9.5" cy="38.5" r="7.5" stroke="#64C292"/>
+            <circle cx="170.5" cy="63.5" r="7.5" stroke="#64C292"/>
+            <circle cx="80" cy="114" r="5" fill="#227967"/>
+            <circle cx="50.5" cy="1.5" r="1.5" fill="#227967"/>
+            <circle cx="1.5" cy="74.5" r="1.5" fill="#227967"/>
+            <circle cx="154.5" cy="101.5" r="2.5" fill="#60C09D"/>
+        </g>
+    </g>
+</svg>
